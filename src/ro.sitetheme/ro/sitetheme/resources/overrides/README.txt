@@ -4,9 +4,9 @@ You should preferable use this directory to override Plone and Plone Addon
 templates, by copying the original template and renaming it to the full
 dotted name.
 
-Usage ro:
+Usage example:
 
-For ro, to override logo.pt in plone.app.layout.viewlets, which is found
+For example, to override logo.pt in plone.app.layout.viewlets, which is found
 in plone/app/layout/viewlets/logo.pt inside the plone.app.layout distribution,
 you would copy logo.pt into the overrides directory as
 
