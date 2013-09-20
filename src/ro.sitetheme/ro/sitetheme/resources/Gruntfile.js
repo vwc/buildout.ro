@@ -117,7 +117,7 @@ module.exports = function (grunt) {
             }
         },
         jekyll: {
-            docs: {}
+            theme: {}
         },
 
         validation: {
@@ -141,6 +141,10 @@ module.exports = function (grunt) {
             recess: {
                 files: 'less/*.less',
                 tasks: ['recess']
+            },
+            templates: {
+                files: 'templates/*.html',
+                tasks: ['jekyll:theme']
             }
         }
     });
