@@ -143,7 +143,7 @@ module.exports = function (grunt) {
                 tasks: ['recess']
             },
             templates: {
-                files: 'templates/*.html',
+                files: '*.html',
                 tasks: ['jekyll:theme']
             }
         }

@@ -13,16 +13,62 @@
     <!-- Docs master nav -->
     {% include navbar.html %}
 
+    <div class="app-brandbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-4">
+                    <a class="app-brand" href="/">
+                        <img src="../assets/img/roconsulting.jpg" />
+                        <span class="h4 app-brandname">Robert Obermeyer</span>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-lg-8">
+                    <p class="h5 app-languages">
+                        <a href="de">Deutsch</a> | <a href="en">English</a>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
     <!-- Docs page layout -->
-    <div class="app-header">
+    <div class="jumbotron app-header">
       <div class="container">
-        <h1>{{ page.title }}</h1>
-        <p>{{ page.lead }}</p>
+        <div class="text-center app-header-claim">know how. and who</div>
+        <div class="row">
+            <div class="col-xs-12 col-lg-4">
+                <div class="appbox">
+                    <h2>Consulting</h2>
+                    <p>Test box</p>
+                    <a class="btn btn-primary" href="#">mehr</a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-4">
+                <div class="appbox">
+                    <div class="appbox-content">
+                        <h2>Consulting</h2>
+                        <p>Test box</p>
+                        <a class="btn btn-primary" href="#">mehr</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-4">
+                <div class="appbox">
+                    <h2>Consulting</h2>
+                    <p>Test box</p>
+                    <a class="btn btn-primary" href="#">mehr</a>
+                </div>
+            </div>
+        </div>
       </div>
     </div>
 
-    <div class="container">
-        <div role="main">
+    <div class="container text-center">
+        <div class="app-content-arrow"></div>
+    </div>
+
+    <div class="app-content">
+        <div class="container" role="main">
           {{ content }}
         </div>
       </div>
@@ -31,10 +77,8 @@
 
     <!-- Footer
     ================================================== -->
-    <footer class="bs-footer" role="contentinfo">
-      <div class="container">
-        {% include social-buttons.html %}
-
+    <footer class="app-footer" role="contentinfo">
+      <div class="container app-footer-content">
         <p>Designed and built by <a href="http://ade25.de" target="_blank">ade25</a>.</p>
         <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
       </div>

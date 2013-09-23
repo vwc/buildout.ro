@@ -1,0 +1,36 @@
+//
+// Application header including hero unit
+// ---------------------------------------------
+
+.app-brandbar {
+    padding: @line-height-computed;
+}
+
+.app-brand {
+    color: @app-gray;
+}
+
+.app-languages {
+    margin-top: @line-height-computed * 2;
+    text-transform: uppercase;
+    color: @app-primary;
+    @media (min-width: @screen-tablet) {
+        text-align: right;
+    }
+    > a {
+        color: @app-gray;
+    }
+}
+
+
+.app-header {
+    background: url(../../assets/img/mountain-dew.jpg) no-repeat 50% 0 @app-gray-light;
+    min-height: 600px;
+    margin-bottom: 0;
+}
+
+.app-header-claim {
+    .h4();
+    color: @app-danger;
+    text-transform: uppercase;
+}
