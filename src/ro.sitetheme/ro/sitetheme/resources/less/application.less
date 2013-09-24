@@ -26,6 +26,18 @@
     pointer-events: none;
 }
 
+// Design component arrow down
+
+.app-arrow {
+    color: #fff;
+    text-align: center;
+    border: 1px solid #fff;
+    padding: 0;
+    > .app-icon {
+        height: 20px;
+    }
+}
+
 .app-content-arrow:after {
     border-color: rgba(136, 183, 213, 0);
     border-top-color: @app-gray-light;
@@ -36,12 +48,13 @@
 
 .appbox {
     padding: @line-height-computed;
-    background: @app-primary;
-    .opacity(.5);
+    margin-bottom: @line-height-computed;
+    background: rgba(142, 192, 94, 0.5);
+    color: @text-color;
+    text-align: center;
 }
 .appbox-content {
     h2 {
         color: #000;
-        .opacity(1.0);
     }
 }

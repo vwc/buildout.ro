@@ -8,13 +8,28 @@
 
 .app-brand {
     color: @app-gray;
+    > img {
+        .center-block();
+        @media (min-width: @screen-desktop) {
+            margin-left: 0;
+            display: inline-block;
+        }
+    }
+}
+
+.app-brandname {
+    .center-block();
+    margin-top: @line-height-computed;
+    @media (min-width: @screen-desktop) {
+       display: inline;
+    }
 }
 
 .app-languages {
     margin-top: @line-height-computed * 2;
     text-transform: uppercase;
     color: @app-primary;
-    @media (min-width: @screen-tablet) {
+    @media (min-width: @screen-desktop) {
         text-align: right;
     }
     > a {
@@ -24,13 +39,41 @@
 
 
 .app-header {
-    background: url(../../assets/img/mountain-dew.jpg) no-repeat 50% 0 @app-gray-light;
-    min-height: 600px;
+    padding-top: 0;
     margin-bottom: 0;
+    @media (min-width: @screen-desktop) {
+        background: url(../../assets/img/mountain-dew.jpg) no-repeat 50% 0 @app-gray-light;
+        min-height: 600px;
+    }
 }
 
 .app-header-claim {
-    .h4();
+    position: relative;
+    .size(200px, @line-height-computed);
+    .center-block();
+    margin-bottom: @navbar-height;
     color: @app-danger;
+    .h4();
+    font-family: @headings-font-family;
+    font-weight: 700;
+    line-height: @line-height-computed;
     text-transform: uppercase;
+    @media (min-width: @screen-tablet) {
+        .size(@screen-xs, @line-height-computed);
+        &:before,
+        &:after {
+            content:"";
+            position: absolute;
+            top: -(@line-height-computed / 2);
+            display: block;
+            .size((@navbar-height * 2), @line-height-computed);
+            border-bottom: 1px solid @app-danger;
+        }
+        &:before {
+            left: 0;
+        }
+        &:after {
+            right: 0;
+        }
+    }
 }
