@@ -1,0 +1,23 @@
+//
+// Deco arrows
+// -----------------------------------------------
+
+
+.app-deco {
+    text-align: center;
+}
+
+.app-decoarrow {
+    .center-block();
+    width: 0;
+    height: 0;
+    border-left: (@line-height-computed * 2) solid transparent;
+    border-right: (@line-height-computed * 2) solid transparent;
+    border-top: (@line-height-computed * 2) solid transparent;
+}
+.app-decoarrow-default {
+    border-top: (@line-height-computed * 2) solid @app-gray-light;
+}
+.app-decoarrow-light {
+    border-top: (@line-height-computed * 2) solid #fff;
+}
