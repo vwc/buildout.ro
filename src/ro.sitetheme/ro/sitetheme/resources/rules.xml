@@ -19,7 +19,7 @@
     <rules css:if-content="#visual-portal-wrapper">
 
         <notheme if="$ajax_load" />          
-        <theme href="_site/index.html" />
+        <theme href="dist/index.html" />
 
         <replace css:theme="title" css:content="title" />
         <replace css:theme="base" css:content="base" />
