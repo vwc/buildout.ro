@@ -10553,7 +10553,8 @@ dd.image-caption {
 
 @media (min-width: 992px) {
   .app-brandname {
-    display: inline;
+    display: inline-block;
+    margin-left: 10px;
   }
 }
 

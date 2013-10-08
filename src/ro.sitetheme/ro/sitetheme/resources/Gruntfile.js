@@ -134,8 +134,23 @@ module.exports = function (grunt) {
         },
 
         sed: {
-            'compile-theme-paths': {
+            'compile-template-index': {
+                path: 'dist/index.html',
+                pattern: '../assets/',
+                replacement: '/++theme++ro.sitetheme/assets/'
+            },
+            'compile-template-signin': {
                 path: 'dist/signin.html',
+                pattern: '../../assets/',
+                replacement: '/++theme++ro.sitetheme/assets/'
+            },
+            'compile-template-frontpage': {
+                path: 'dist/frontpage.html',
+                pattern: '../../assets/',
+                replacement: '/++theme++ro.sitetheme/assets/'
+            },
+            'compile-template-consulting': {
+                path: 'dist/consulting.html',
                 pattern: '../../assets/',
                 replacement: '/++theme++ro.sitetheme/assets/'
             }
