@@ -1,0 +1,327 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+  
+    Getting started &middot; Bootstrap
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+<link href="../../dist/css/styles.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="../../assets/js/html5shiv.js"></script>
+  <script src="../../assets/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../assets/ico/apple-touch-icon-144-precomposed.png">
+                               <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip navigation</a>
+    <div class="navbar navbar-default navbar-fixed-top app-toolbar" id="app-toolbar">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".app-toolbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">CMS Toolbar</a>
+    </div>
+    <div class="navbar-collapse collapse app-toolbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Contents</a></li>
+          <li><a href="#about">View</a></li>
+          <li><a href="#contact">Edit</a></li>
+          <li><a href="#contact">Share</a></li>
+          <li><a href="#contact">Content rules</a></li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+          <li id="plone-personal-actions" class="dropdown dropdown-userinfo">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="/author/123456789">
+              <span>John Doe</span>
+              <b class="caret">
+            </b></a>
+            <ul class="dropdown-menu"><li id="plone-personal-actions-dashboard">
+                <a href="/dashboard">My workspace</a>
+              </li>
+              <li id="plone-personal-actions-preferences">
+                <a href="/preferences">Settings</a>
+              </li>
+              <li id="plone-personal-actions-plone_setup">
+                <a href="/controlpanel">Configuration</a>
+              </li>
+              <li id="plone-personal-actions-logout">
+                <a href="/logout">Signout</a>
+              </li>
+            </ul></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Add <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Folder</a></li>
+                <li><a href="#">Document</a></li>
+                <li><a href="#">Image</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Settings</li>
+                <li><a href="#">Filter options</a></li>
+                <li><a href="#">Add...</a></li>
+              </ul>
+            </li>
+        </ul>
+    </div><!--/.nav-collapse -->
+</div>
+    <!-- Docs master nav -->
+    <nav class="navbar navbar-inverse app-navbar" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand visible-xs" href="#">RoConsulting</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-main-collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Consulting <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li><a href="#">Separated link</a></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">HR Management <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li><a href="#">Separated link</a></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Work FM <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li><a href="#">Separated link</a></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+
+    <div class="app-brandbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-4">
+                    <a class="app-brand" href="/">
+                        <img src="../..//assets/img/roconsulting.jpg" />
+                        <span class="h4 app-brandname">Robert Obermeyer</span>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-lg-8">
+                    <p class="h5 app-languages">
+                        <a href="de">Deutsch</a> | <a href="en">English</a>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="app-content">
+        <div class="container" role="main">
+          <main class="app-content-body">
+  <div class="container app-page app-page-default" id="content">
+    <div class="row">
+        <div class="col-xs-12 col-md-8">
+            <div class="app-page-header">
+                <div class="page-header">
+                    <h1>Consulting</h1>
+                </div>
+                <p class="lead">
+                    Get started by refining the <strong>_layouts</strong> and customizing the
+                    site scaffolding.
+                </p>
+            </div>
+            <div class="app-page-content">
+                <div class="panel-group" id="accordion">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                          Kostensenkungsprogramme
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                          Organisationsberatung
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                          Strukturberatung
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                          Strategieberatung
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <aside class="app-sidebar" id="app-sidebar">
+                <div class="appbox">
+                    <div class="appbox-content">
+                        <img src="../assets/img/icon-hr-management.png" />
+                        <h2>HR Management</h2>
+                        <a class="btn btn-primary" href="#">mehr</a>
+                    </div>
+                </div>
+                <div class="appbox">
+                    <img src="../assets/img/icon-work-fm.png" />
+                    <h2>Work FM</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                    <a class="btn btn-primary" href="#">mehr</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+  </div>
+</main>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="app-footer" role="contentinfo">
+      <div class="container app-footer-content">
+        <div class="row">
+            <div class="col-xs-12 col-md-5">
+                <div class="app-footer-navbar">
+                    <ul class="nav nav-pills">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li><a href="#">Separated link</a></li>
+                      <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-2">
+                <img class="img-responsive" src="../..//assets/img/roconsulting-small.jpg" />
+            </div>
+            <div class="col-xs-12 col-md-5">
+                <p>&copy; 2012 - Robert Obermeyer<br>
+                    Human Resource Management</p>
+            </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../bower_components/jquery/jquery.js"></script>
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="../../bower_components/holderjs/holder.js"></script>
+
+<script src="../../assets/js/application.js"></script>
+
+<!-- Custom Fonts -->
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Montserrat:700,400:latin', 'Sanchez:400italic,400:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+<!-- Analytics Piwik (Change URI)
+================================================== -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://fuenfzueins.vorwaerts-werbung.de/piwik/" : "http://fuenfzueins.vorwaerts-werbung.de/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 3);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://fuenfzueins.vorwaerts-werbung.de/piwik/piwik.php?idsite=3" style="border:0" alt="" /></p></noscript>
+
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    {% include head.html %}
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip navigation</a>
+    {% include toolbar.html %}
+    <!-- Docs master nav -->
+    {% include navbar.html %}
+
+    <div class="app-brandbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-4">
+                    <a class="app-brand" href="/">
+                        <img src="{{ page.base_url }}/assets/img/roconsulting.jpg" />
+                        <span class="h4 app-brandname">Robert Obermeyer</span>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-lg-8">
+                    <p class="h5 app-languages">
+                        <a href="de">Deutsch</a> | <a href="en">English</a>
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Docs page layout -->
+    <div class="jumbotron app-header">
+      <div class="container">
+        <div class="app-deco">
+            <div class="app-decoarrow app-decoarrow-light"></div>
+        </div>
+        <div class="text-center app-header-claim">know how. and who</div>
+        <div class="row">
+            <div class="col-xs-12 col-lg-4">
+                <div class="appbox">
+                    <img src="../assets/img/icon-consulting.png" />
+                    <h2>Consulting</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                    <a class="btn btn-primary" href="#">mehr</a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-4">
+                <div class="appbox">
+                    <div class="appbox-content">
+                        <img src="../assets/img/icon-hr-management.png" />
+                        <h2>HR Management</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                        <a class="btn btn-primary" href="#">mehr</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-4">
+                <div class="appbox">
+                    <img src="../assets/img/icon-work-fm.png" />
+                    <h2>Work FM</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                    <a class="btn btn-primary" href="#">mehr</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-content">
+        <div class="container" role="main">
+            <div class="app-deco">
+                <div class="app-decoarrow app-decoarrow-default"></div>
+            </div>
+          {{ content }}
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="app-footer" role="contentinfo">
+      <div class="container app-footer-content">
+        <div class="row">
+            <div class="col-xs-12 col-md-5">
+                <div class="app-footer-navbar">
+                    <ul class="nav nav-pills">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li><a href="#">Separated link</a></li>
+                      <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-2">
+                <img class="img-responsive" src="{{ page.base_url }}/assets/img/roconsulting-small.jpg" />
+            </div>
+            <div class="col-xs-12 col-md-5">
+                <p>&copy; 2012 - Robert Obermeyer<br>
+                    Human Resource Management</p>
+            </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS and analytics only. -->
+    {% include footer.html %}
+
+  </body>
+</html>
