@@ -171,6 +171,13 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-rev');
     grunt.loadNpmTasks('browserstack-runner');
 
+    // Copy jekyll generated templates and rename for diazo
+    grunt.registerTask('copy-theme-templates', '', function () {
+        grunt.file.copy('_site/index.html', 'dist/theme.html');
+        grunt.file.copy('_site/signin/index.html', 'dist/signin.html');
+        grunt.file.copy('_site/styletile/index.html', 'dist/styletile.html');
+    });
+
     // Docs HTML validation task
     grunt.registerTask('validate-html', ['jekyll', 'validation']);
 
