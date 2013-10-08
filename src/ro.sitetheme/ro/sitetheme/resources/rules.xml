@@ -62,7 +62,8 @@
             css:content-children="#portal-personaltools" />
 
         <!-- Logo (link target) -->
-        <copy attributes="href" css:content="#portal-logo" css:theme="a.brand" />
+        <copy attributes="href" css:content="#portal-logo" css:theme=".app-brand" />
+        <copy attributes="href" css:content="#portal-logo" css:theme=".navbar-brand" />
 
         <!-- Portal searchbox -->
         <!--<copy attributes="action" css:content="#portal-searchbox form"
