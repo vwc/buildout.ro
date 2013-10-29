@@ -10438,6 +10438,7 @@ dd.image-caption {
 
 .app-brand {
   color: #5a5f64;
+  text-align: center;
 }
 
 .app-brand > img {
@@ -10446,10 +10447,11 @@ dd.image-caption {
   margin-left: auto;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .app-brand > img {
     display: inline-block;
     margin-left: 0;
+    text-align: left;
   }
 }
 
@@ -10460,7 +10462,7 @@ dd.image-caption {
   margin-left: auto;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .app-brandname {
     display: inline-block;
     margin-left: 10px;
@@ -10470,10 +10472,11 @@ dd.image-caption {
 .app-languages {
   margin-top: 40px;
   color: #8ec05e;
+  text-align: center;
   text-transform: uppercase;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .app-languages {
     text-align: right;
   }
@@ -10567,10 +10570,6 @@ dd.image-caption {
   border-bottom: 10px solid #8ec05e;
 }
 
-.app-footer-brand {
-  text-align: center;
-}
-
 .app-footer-content {
   padding: 20px;
   color: #5a5f64;
@@ -10588,6 +10587,9 @@ dd.image-caption {
 @media (min-width: 992px) {
   .app-footer-navbar > p {
     text-align: right;
+  }
+  .app-footer-brand {
+    text-align: center;
   }
 }
 
