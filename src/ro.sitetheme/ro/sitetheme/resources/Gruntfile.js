@@ -240,7 +240,7 @@ module.exports = function (grunt) {
     grunt.registerTask('dist-templates', ['jekyll:theme', 'copy-templates']);
 
     // Full distribution task.
-    grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'dist-templates']);
+    grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'dist-templates', 'sed']);
 
     // Default task.
     grunt.registerTask('default', ['test', 'dist']);
