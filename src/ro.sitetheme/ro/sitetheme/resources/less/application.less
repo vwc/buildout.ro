@@ -2,16 +2,31 @@
 // Application stylesheet
 // -----------------------------------------------
 
+// Fix password reset
+
+#userid {
+    .form-control();
+}
+
+
 .app-navbar {
     font-family: @headings-font-family;
     font-weight: 700;
     text-transform: uppercase;
 }
 
+.app-toolbar + .app-navbar {
+    margin-top: @navbar-height;
+}
+
 .app-content {
     margin-bottom: (@line-height-computed * 2);
 }
 
+.app-page-default {
+    border-top: 1px solid @app-primary;
+    padding-top: @line-height-computed;
+}
 
 .appbox {
     padding: @line-height-computed;

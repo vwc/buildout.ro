@@ -12,7 +12,7 @@ module.exports = function (grunt) {
         // Metadata.
         pkg: grunt.file.readJSON('package.json'),
         banner: '/*!\n' +
-                  '* <%= _.slugify(themeName) %> v<%= pkg.version %> by Ade25\n' +
+                  '* RoConsulting v<%= pkg.version %> by Ade25\n' +
                   '* Copyright <%= pkg.author %>\n' +
                   '* Licensed under <%= pkg.licenses %>.\n' +
                   '*\n' +
@@ -53,6 +53,13 @@ module.exports = function (grunt) {
                     'js/main.js'
                 ],
                 dest: 'dist/js/<%= pkg.name %>.js'
+            },
+            theme: {
+                src: [
+                    'bower_components/bootstrap/dist/js/bootstrap.js',
+                    'js/main.js'
+                ],
+                dest: 'dist/js/main.js'
             }
         },
 
@@ -126,6 +133,29 @@ module.exports = function (grunt) {
             theme: {}
         },
 
+        sed: {
+            'compile-template-index': {
+                path: 'dist/index.html',
+                pattern: '../assets/',
+                replacement: '/++theme++ro.sitetheme/assets/'
+            },
+            'compile-template-signin': {
+                path: 'dist/signin.html',
+                pattern: '../../assets/',
+                replacement: '/++theme++ro.sitetheme/assets/'
+            },
+            'compile-template-frontpage': {
+                path: 'dist/frontpage.html',
+                pattern: '../../assets/',
+                replacement: '/++theme++ro.sitetheme/assets/'
+            },
+            'compile-template-consulting': {
+                path: 'dist/consulting.html',
+                pattern: '../../assets/',
+                replacement: '/++theme++ro.sitetheme/assets/'
+            }
+        },
+
         validation: {
             options: {
                 reset: true
@@ -169,7 +199,16 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-jekyll');
     grunt.loadNpmTasks('grunt-recess');
     grunt.loadNpmTasks('grunt-rev');
+    grunt.loadNpmTasks('grunt-sed');
     grunt.loadNpmTasks('browserstack-runner');
+
+    // Copy jekyll generated templates and rename for diazo
+    grunt.registerTask('copy-templates', '', function () {
+        grunt.file.copy('_site/index.html', 'dist/index.html');
+        grunt.file.copy('_site/signin/index.html', 'dist/signin.html');
+        grunt.file.copy('_site/frontpage/index.html', 'dist/frontpage.html');
+        grunt.file.copy('_site/consulting/index.html', 'dist/consulting.html');
+    });
 
     // Docs HTML validation task
     grunt.registerTask('validate-html', ['jekyll', 'validation']);
@@ -198,10 +237,10 @@ module.exports = function (grunt) {
     grunt.registerTask('dist-cb', ['rev']);
 
     // Template distribution task.
-    grunt.registerTask('dist-templates', ['jekyll:theme']);
+    grunt.registerTask('dist-templates', ['jekyll:theme', 'copy-templates']);
 
     // Full distribution task.
-    grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js']);
+    grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'dist-templates']);
 
     // Default task.
     grunt.registerTask('default', ['test', 'dist']);

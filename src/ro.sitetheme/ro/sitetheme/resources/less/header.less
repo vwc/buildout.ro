@@ -4,6 +4,9 @@
 
 .app-brandbar {
     padding: @line-height-computed;
+    &.app-brandbar-default {
+        border-bottom: 1px solid @brand-primary;
+    }
 }
 
 .app-brand {
@@ -21,7 +24,8 @@
     .center-block();
     margin-top: @line-height-computed;
     @media (min-width: @screen-desktop) {
-       display: inline;
+       display: inline-block;
+       margin-left: (@line-height-computed / 2);
     }
 }
 
