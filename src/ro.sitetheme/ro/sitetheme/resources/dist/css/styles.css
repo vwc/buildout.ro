@@ -10567,13 +10567,26 @@ dd.image-caption {
   border-bottom: 10px solid #8ec05e;
 }
 
+.app-footer-brand {
+  text-align: center;
+}
+
 .app-footer-content {
   padding: 20px;
+  color: #5a5f64;
   border-top: 1px solid #8ec05e;
 }
 
+.app-footer-content p {
+  padding-top: 10px;
+}
+
+.app-footer-content a {
+  color: #5a5f64;
+}
+
 @media (min-width: 992px) {
-  .app-footer-navbar {
+  .app-footer-navbar > p {
     text-align: right;
   }
 }
