@@ -9884,7 +9884,6 @@ div.field label span.formHelp {
 }
 
 div.field div.label,
-div.field span.label,
 div.field label {
   padding: 0;
   font-size: 14px;
@@ -9896,7 +9895,6 @@ div.field label {
 }
 
 div.field div.label span.formHelp,
-div.field span.label span.formHelp,
 div.field label span.formHelp {
   display: block;
   margin-top: 5px;
@@ -9946,17 +9944,12 @@ div.overlay-iframe {
 div.overlaybg div.close,
 div.overlay div.close {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: -14px;
+  left: -14px;
   width: 30px;
   height: 30px;
   cursor: pointer;
   background-image: url(../images/pb_close.png);
-}
-
-div.overlaybg div.close:after,
-div.overlay div.close:after {
-  content: '\d7';
 }
 
 .pb-ajax {
@@ -10015,7 +10008,7 @@ div.overlay #createGroup fieldset {
 }
 
 div.overlay p {
-  margin-bottom: 20px;
+  margin-bottom: 1.428571429;
 }
 
 div.overlay label {
@@ -10221,90 +10214,6 @@ table.grid th {
 
 #category .separator {
   display: none;
-}
-
-dl.portalMessage {
-  padding: 15px;
-  margin-top: 0;
-  margin-bottom: 20px;
-  margin-bottom: 0;
-  color: #c09853;
-  background-color: #fcf8e3;
-  border: 1px solid transparent;
-  border-color: #fbeed5;
-  border-radius: 0;
-}
-
-dl.portalMessage h4 {
-  margin-top: 0;
-  color: inherit;
-}
-
-dl.portalMessage .alert-link {
-  font-weight: bold;
-}
-
-dl.portalMessage > p,
-dl.portalMessage > ul {
-  margin-bottom: 0;
-}
-
-dl.portalMessage > p + p {
-  margin-top: 5px;
-}
-
-dl.portalMessage hr {
-  border-top-color: #f8e5be;
-}
-
-dl.portalMessage .alert-link {
-  color: #a47e3c;
-}
-
-dl.portalMessage dt {
-  margin: 0;
-}
-
-dl.portalMessage dd {
-  margin-left: 0;
-}
-
-dl.portalMessage.note,
-dl.portalMessage.tip {
-  color: #3a87ad;
-  background-color: #d9edf7;
-  border-color: #bce8f1;
-}
-
-dl.portalMessage.note hr,
-dl.portalMessage.tip hr {
-  border-top-color: #a6e1ec;
-}
-
-dl.portalMessage.note .alert-link,
-dl.portalMessage.tip .alert-link {
-  color: #2d6987;
-}
-
-dl.portalMessage.danger,
-dl.portalMessage.error {
-  color: #b94a48;
-  background-color: #f2dede;
-  border-color: #eed3d7;
-}
-
-dl.portalMessage.danger hr,
-dl.portalMessage.error hr {
-  border-top-color: #e6c1c7;
-}
-
-dl.portalMessage.danger .alert-link,
-dl.portalMessage.error .alert-link {
-  color: #953b39;
-}
-
-body > .portalMessage {
-  padding-top: 60px;
 }
 
 .listingBar {
@@ -10577,6 +10486,7 @@ dd.image-caption {
 .app-header {
   padding-top: 0;
   margin-bottom: 0;
+  background: #e3e4e5;
 }
 
 @media (min-width: 992px) {
