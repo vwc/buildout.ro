@@ -35,69 +35,85 @@
     <div class="container" role="main">
         <main class="app-content-body">
   <div class="container">
-    <section class="app-tile app-signin" id="app-signin">
-          <section class="page page-signin">
-            <header class="page-header">
-                <h1>
-                    Anmelden
-                </h1>
-            </header>
-            <article class="page-content" id="app-signin-content"> 
-                <form class="enableAutoFocus" action="." id="login_form" method="post">
-                    <div id="login-form">
-                        <div class="field">
-                            <label for="__ac_name">Benutzername</label>
-                            <input type="text" id="__ac_name" value="" name="__ac_name" size="15">
-                        </div>
-                        <div class="field">
-                                <label for="__ac_password">Passwort</label>
-                                <input type="password" id="__ac_password" name="__ac_password" size="15">
-                        </div>
-                        <div class="formControls text-right">
-                            <a class="btn btn-link btn-sm" href="/mail_password_form?userid=">Passwort vergessen?</a>
-                            <input type="submit" value="Anmelden" name="submit" class="btn btn-primary btn-lg">
-                        </div>
-                    </div>
-                </form>
-            </article>
-            <hr>
-            <a class="app-brand" href="/">
-                <img src="/++theme++ro.sitetheme/assets/img/roconsulting.jpg" />
-                <span class="h4 app-brandname">Robert Obermeyer</span>
-            </a>
-          </section>
-        </section>
+    <section class="app-signin" id="app-signin">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="page-aside">
+                    <a class="app-brand" href="/">
+                        <img class="img-responsive" src="/++theme++ro.sitetheme/assets/img/roconsulting.jpg" />
+                        <span class="h4 app-brandname">Robert Obermeyer</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <section class="page page-signin">
+                    <article class="page-content" id="app-signin-content">
+                        <header class="page-header">
+                            <h2>
+                                Anmelden
+                            </h2>
+                        </header>
+                        <form class="enableAutoFocus" action="." id="login_form" method="post">
+                            <div id="login-form">
+                                <div class="field">
+                                    <label for="__ac_name">E-Mail-Adresse</label>
+                                    <input type="text" id="__ac_name" value="" name="__ac_name" size="15">
+                                </div>
+                                <div class="field">
+                                        <label for="__ac_password">Passwort</label>
+                                        <input type="password" id="__ac_password" name="__ac_password" size="15">
+                                </div>
+                                <div class="formControls text-right">
+                                    <a class="btn btn-link btn-sm" href="/mail_password_form?userid=">Passwort vergessen?</a>
+                                    <input type="submit" value="Anmelden" name="submit" class="btn btn-primary btn-lg">
+                                </div>
+                            </div>
+                        </form>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </section>
   </div>
 </main>
     </div>
-    <footer class="app-footer" role="contentinfo">
-  <div class="container app-footer-content">
-    <div class="row">
-        <div class="col-xs-12 col-md-5">
-            <div class="app-footer-navbar">
-              <p>
-                <a href="/consulting" rel="nofollow">Consulting</a> &ndash;
-                <a href="/hr-management" rel="nofollow">HR Management</a> &ndash;
-                <a href="/work-fm" rel="nofollow">Work-FM</a><br>
-                <a href="/kontakt" rel="nofollow">Kontakt</a> &ndash;
-                <a href="/impressum" rel="nofollow">Impressum</a>
-              </p>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-2">
-            <div class="app-footer-brand">
-              <img class="center-block" src="/++theme++ro.sitetheme/assets/img/roconsulting-small.jpg" />
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-5">
-            <p>&copy; 2012 - Robert Obermeyer<br>
-                Human Resource Management</p>
-        </div>
-    </div>
-  </div>
-</footer>
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../bower_components/jquery/jquery.js"></script>
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="../../bower_components/holderjs/holder.js"></script>
+
+<script src="/++theme++ro.sitetheme/assets/js/application.js"></script>
+
+<!-- Custom Fonts -->
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Montserrat:700,400:latin', 'Sanchez:400italic,400:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+<!-- Analytics Piwik (Change URI)
+================================================== -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://fuenfzueins.vorwaerts-werbung.de/piwik/" : "http://fuenfzueins.vorwaerts-werbung.de/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 3);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://fuenfzueins.vorwaerts-werbung.de/piwik/piwik.php?idsite=3" style="border:0" alt="" /></p></noscript>
     <div id="webfonts">
-    <!-- Custom Fonts -->
+        <!-- Custom Fonts -->
 <script type="text/javascript">
   WebFontConfig = {
     google: { families: [ 'Montserrat:700,400:latin', 'Sanchez:400italic,400:latin' ] }
