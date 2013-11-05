@@ -10700,6 +10700,10 @@ textarea#userid {
   margin-bottom: 40px;
 }
 
+.app-content.app-content-tiles {
+  margin-top: -200px;
+}
+
 .app-page-default {
   padding-top: 20px;
   border-top: 1px solid #8ec05e;
