@@ -10562,6 +10562,14 @@ dd.image-caption {
   }
 }
 
+.app-header-title {
+  margin-top: -100px;
+  font-size: 63px;
+  color: #fff;
+  text-align: center;
+  text-shadow: -1px -1px #555555, -2px -2px #555555;
+}
+
 .app-simple {
   margin-top: 50px;
   border-top: 10px solid #ed6262;
@@ -10705,6 +10713,11 @@ textarea#userid {
   font-family: 'Montserrat', 'Sanchez', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.app-navbar .navbar-nav > .dropdown > a .caret {
+  border-top-color: #ed6262;
+  border-bottom-color: #ed6262;
 }
 
 .app-toolbar + .app-navbar {

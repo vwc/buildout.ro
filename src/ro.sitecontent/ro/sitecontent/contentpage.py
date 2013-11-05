@@ -24,6 +24,10 @@ class IContentPage(form.Schema, IImageScaleTraversable):
     """
     A folderish content page
     """
+    text = RichText(
+        title=_(u"Body Text"),
+        required=False,
+    )
 
 
 class ContentPage(Container):
