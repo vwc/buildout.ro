@@ -18,18 +18,29 @@
             .text-left();
             margin-left: 0;
             display: inline-block;
+            .pull-left();
         }
     }
 }
 
 .app-brandname {
     .center-block();
-    margin-top: @line-height-computed;
+    margin-top: (@line-height-computed * 1.5);
     @media (min-width: @screen-tablet) {
        display: inline-block;
        margin-left: (@line-height-computed / 2);
     }
 }
+
+.app-brand-subtitle {
+    .center-block();
+    //margin-top: @line-height-computed;
+    @media (min-width: @screen-tablet) {
+       display: inline-block;
+       margin-left: (@line-height-computed / 2);
+    }
+}
+
 
 .app-languages {
     margin-top: @line-height-computed * 2;

@@ -10450,6 +10450,8 @@ dd.image-caption {
 @media (min-width: 768px) {
   .app-brand > img {
     display: inline-block;
+    float: left !important;
+    float: left;
     margin-left: 0;
     text-align: left;
   }
@@ -10457,13 +10459,26 @@ dd.image-caption {
 
 .app-brandname {
   display: block;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
 }
 
 @media (min-width: 768px) {
   .app-brandname {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+.app-brand-subtitle {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .app-brand-subtitle {
     display: inline-block;
     margin-left: 10px;
   }
