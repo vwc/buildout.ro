@@ -13,24 +13,8 @@
     <!-- Docs master nav -->
     {% include navbar.html %}
 
-    <div class="app-brandbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-8 col-lg-8">
-                    <a class="app-brand" href="/">
-                        <img src="{{ page.base_url }}assets/img/roconsulting.jpg" />
-                        <span class="h4 app-brandname">Robert Obermeyer</span>
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-lg-4">
-                    <p class="h5 app-languages">
-                        <a href="de">Deutsch</a> | <a href="en">English</a>
-                    </p>
-                </div>
-            </div>
-            
-        </div>
-    </div>
+    {% include brandbar.html %}
+    
     <!-- Docs page layout -->
     <div class="jumbotron app-header">
       <div class="container">
