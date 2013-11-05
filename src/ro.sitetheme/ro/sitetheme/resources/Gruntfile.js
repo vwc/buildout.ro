@@ -208,6 +208,7 @@ module.exports = function (grunt) {
         grunt.file.copy('_site/signin/index.html', 'dist/signin.html');
         grunt.file.copy('_site/frontpage/index.html', 'dist/frontpage.html');
         grunt.file.copy('_site/consulting/index.html', 'dist/consulting.html');
+        grunt.file.copy('_site/work-fm/index.html', 'dist/work-fm.html');
     });
 
     // Docs HTML validation task
