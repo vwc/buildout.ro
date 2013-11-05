@@ -34,7 +34,7 @@ class ContentPage(Container):
     grok.implements(IContentPage)
 
 
-class SampleView(grok.View):
+class View(grok.View):
     grok.context(IContentPage)
     grok.require('zope2.View')
     grok.name('view')
