@@ -18,18 +18,29 @@
             .text-left();
             margin-left: 0;
             display: inline-block;
+            .pull-left();
         }
     }
 }
 
 .app-brandname {
     .center-block();
-    margin-top: @line-height-computed;
+    margin-top: (@line-height-computed * 1.5);
     @media (min-width: @screen-tablet) {
        display: inline-block;
        margin-left: (@line-height-computed / 2);
     }
 }
+
+.app-brand-subtitle {
+    .center-block();
+    //margin-top: @line-height-computed;
+    @media (min-width: @screen-tablet) {
+       display: inline-block;
+       margin-left: (@line-height-computed / 2);
+    }
+}
+
 
 .app-languages {
     margin-top: @line-height-computed * 2;
@@ -85,4 +96,12 @@
             right: 0;
         }
     }
+}
+
+.app-header-title {
+    .text-center();
+    margin-top: -(@navbar-height * 2);
+    color: #fff;
+    font-size: (@font-size-base * 4.5);
+    text-shadow: -1px -1px @gray, -2px -2px @gray;
 }

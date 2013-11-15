@@ -13,6 +13,10 @@
     font-family: @headings-font-family;
     font-weight: 700;
     text-transform: uppercase;
+    .navbar-nav > .dropdown > a .caret {
+        border-bottom-color: @brand-primary;
+        border-top-color: @brand-primary;
+    }
 }
 
 .app-toolbar + .app-navbar {
@@ -21,6 +25,9 @@
 
 .app-content {
     margin-bottom: (@line-height-computed * 2);
+    &.app-content-tiles {
+        margin-top: -(@navbar-height * 4);
+    }
 }
 
 .app-page-default {

@@ -138,23 +138,25 @@
 
 
     <div class="app-brandbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-lg-4">
-                    <a class="app-brand" href="/">
-                        <img src="/++theme++ro.sitetheme/assets/img/roconsulting.jpg" />
-                        <span class="h4 app-brandname">Robert Obermeyer</span>
-                    </a>
-                </div>
-                <div class="col-xs-12 col-lg-8">
-                    <p class="h5 app-languages">
-                        <a href="de">Deutsch</a> | <a href="en">English</a>
-                    </p>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-lg-8">
+                <a class="app-brand" href="/">
+                    <img class="img-responsive" src="/++theme++ro.sitetheme/assets/img/roconsulting.jpg" />
+                    <span class="h4 app-brandname">Robert Obermeyer</span><br class="hidden-xs">
+                    <span class="h5 app-brand-subtitle">human resource management <span class="text-muted">GmbH</span></span>
+                </a>
             </div>
-            
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <p class="h5 app-languages">
+                    <a href="de">Deutsch</a> | <a href="en">English</a>
+                </p>
+            </div>
         </div>
+        
     </div>
+</div>
+    
     <div class="app-content">
         <div class="container" role="main">
           <main class="app-content-body">
@@ -255,8 +257,6 @@
   </div>
 </main>
         </div>
-      </div>
-
     </div>
 
     <!-- JS and analytics only. -->
@@ -286,6 +286,57 @@
     </div>
   </div>
 </footer>
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../bower_components/jquery/jquery.js"></script>
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="../../bower_components/holderjs/holder.js"></script>
 
+<script src="/++theme++ro.sitetheme/assets/js/application.js"></script>
+
+<!-- Custom Fonts -->
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Montserrat:700,400:latin', 'Sanchez:400italic,400:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+<!-- Analytics Piwik (Change URI)
+================================================== -->
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://fuenfzueins.vorwaerts-werbung.de/piwik/" : "http://fuenfzueins.vorwaerts-werbung.de/piwik/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 3);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://fuenfzueins.vorwaerts-werbung.de/piwik/piwik.php?idsite=3" style="border:0" alt="" /></p></noscript>
+    <div id="webfonts">
+    <!-- Custom Fonts -->
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Montserrat:700,400:latin', 'Sanchez:400italic,400:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+    </div>
   </body>
 </html>
