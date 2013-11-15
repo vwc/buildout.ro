@@ -10509,8 +10509,9 @@ dd.image-caption {
 
 @media (min-width: 992px) {
   .app-header {
-    min-height: 600px;
-    background: url(../../assets/img/mountain-dew.jpg) no-repeat 50% 0 #e3e4e5;
+    height: 600px;
+    background: url(../../assets/img/header-bg.jpg) no-repeat 50% 0 #e3e4e5;
+    border-bottom: 200px solid #e3e4e5;
   }
 }
 
@@ -10521,10 +10522,10 @@ dd.image-caption {
   height: 20px;
   margin-top: 50px;
   margin-right: auto;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   margin-left: auto;
   font-family: 'Montserrat', 'Sanchez', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 500;
   font-weight: 700;
   line-height: 1.1;
@@ -10539,17 +10540,18 @@ dd.image-caption {
   color: #999999;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .app-header-claim {
     width: 480px;
     height: 20px;
+    margin-bottom: 150px;
   }
   .app-header-claim:before,
   .app-header-claim:after {
     position: absolute;
     top: -10px;
     display: block;
-    width: 100px;
+    width: 75px;
     height: 20px;
     border-bottom: 1px solid #ed6262;
     content: "";

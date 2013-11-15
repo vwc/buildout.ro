@@ -60,9 +60,10 @@
     padding-top: 0;
     margin-bottom: 0;
     background: @app-gray-light;
-    @media (min-width: @screen-desktop) {
-        background: url(../../assets/img/mountain-dew.jpg) no-repeat 50% 0 @app-gray-light;
-        min-height: 600px;
+    @media (min-width: @screen-md) {
+        background: url(../../assets/img/header-bg.jpg) no-repeat 50% 0 @app-gray-light;
+        height: 600px;
+        border-bottom: (@navbar-height * 4) solid @app-gray-light;
     }
 }
 
@@ -71,22 +72,23 @@
     .size(200px, @line-height-computed);
     .center-block();
     margin-top: @navbar-height;
-    margin-bottom: @navbar-height * 3;
+    margin-bottom: @navbar-height;
     color: @app-danger;
-    .h4();
+    .h3();
     font-family: @headings-font-family;
     font-weight: 700;
     line-height: @line-height-computed;
     text-transform: uppercase;
-    @media (min-width: @screen-tablet) {
+    @media (min-width: @screen-md) {
         .size(@screen-xs, @line-height-computed);
+        margin-bottom: @navbar-height * 3;
         &:before,
         &:after {
             content:"";
             position: absolute;
             top: -(@line-height-computed / 2);
             display: block;
-            .size((@navbar-height * 2), @line-height-computed);
+            .size(ceil(@navbar-height * 1.5), @line-height-computed);
             border-bottom: 1px solid @app-danger;
         }
         &:before {
