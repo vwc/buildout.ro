@@ -105,6 +105,16 @@ module.exports = function (grunt) {
                 dest: 'dist/'
             }
         },
+        imagemin: {
+            theme: {
+                files: [{
+                    expand: true,
+                    cwd: 'assets/img/',
+                    src: ['*.{png,jpg,gif}'],
+                    dest: 'dist/img'
+                }]
+            }
+        },
         rev: {
             options:  {
                 algorithm: 'sha256',
