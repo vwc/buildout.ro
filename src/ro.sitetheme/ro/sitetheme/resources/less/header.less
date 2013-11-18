@@ -26,6 +26,7 @@
 .app-brandname {
     .center-block();
     margin-top: (@line-height-computed * 1.5);
+    text-transform: lowercase;
     @media (min-width: @screen-tablet) {
        display: inline-block;
        margin-left: (@line-height-computed / 2);
@@ -34,6 +35,10 @@
 
 .app-brand-subtitle {
     .center-block();
+    font-weight: 400;
+    > .app-brand-text-sm {
+        font-weight: 300;
+    }
     //margin-top: @line-height-computed;
     @media (min-width: @screen-tablet) {
        display: inline-block;
@@ -55,6 +60,8 @@
     }
 }
 
+// Section specific app header
+// ----------------------------
 
 .app-header {
     padding-top: 0;
@@ -62,9 +69,16 @@
     background: @app-gray-light;
     @media (min-width: @screen-md) {
         background: url(../../assets/img/header-bg.jpg) no-repeat 50% 0 @app-gray-light;
-        height: 600px;
-        border-bottom: (@navbar-height * 4) solid @app-gray-light;
+        height: 525px;
+        &.app-header-frontpage {
+            height: 725px;
+            border-bottom: (@navbar-height * 4) solid @app-gray-light;
+        }
     }
+}
+
+.section-work-fm .app-header {
+    background-position: 50% -550px;
 }
 
 .app-header-claim {

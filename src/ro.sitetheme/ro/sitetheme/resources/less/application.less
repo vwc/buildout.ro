@@ -13,6 +13,9 @@
     font-family: @headings-font-family;
     font-weight: 700;
     text-transform: uppercase;
+    .navbar-nav > .nav-item-home > a {
+        color: @brand-primary;
+    }
     .navbar-nav > .dropdown > a .caret {
         border-bottom-color: @brand-primary;
         border-top-color: @brand-primary;
@@ -38,7 +41,7 @@
 .appbox {
     padding: @line-height-computed;
     margin-bottom: @line-height-computed;
-    background: rgba(142, 192, 94, 0.5);
+    background: rgba(142, 192, 94, 0.75);
     color: @text-color;
     text-align: center;
 }
@@ -51,4 +54,9 @@
     h2 {
         color: #000;
     }
+}
+
+.appbox-btn {
+    font-family: @headings-font-family;
+    text-transform: uppercase;
 }

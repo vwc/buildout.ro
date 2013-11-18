@@ -10223,6 +10223,7 @@ dd.image-caption {
   margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
+  text-transform: lowercase;
 }
 
 @media (min-width: 768px) {
@@ -10236,6 +10237,11 @@ dd.image-caption {
   display: block;
   margin-right: auto;
   margin-left: auto;
+  font-weight: 400;
+}
+
+.app-brand-subtitle > .app-brand-text-sm {
+  font-weight: 300;
 }
 
 @media (min-width: 768px) {
@@ -10270,10 +10276,17 @@ dd.image-caption {
 
 @media (min-width: 992px) {
   .app-header {
-    height: 600px;
+    height: 525px;
     background: url(../../assets/img/header-bg.jpg) no-repeat 50% 0 #e3e4e5;
+  }
+  .app-header.app-header-frontpage {
+    height: 725px;
     border-bottom: 200px solid #e3e4e5;
   }
+}
+
+.section-work-fm .app-header {
+  background-position: 50% -550px;
 }
 
 .app-header-claim {
@@ -10478,6 +10491,10 @@ textarea#userid {
   text-transform: uppercase;
 }
 
+.app-navbar .navbar-nav > .nav-item-home > a {
+  color: #ed6262;
+}
+
 .app-navbar .navbar-nav > .dropdown > a .caret {
   border-top-color: #ed6262;
   border-bottom-color: #ed6262;
@@ -10505,7 +10522,7 @@ textarea#userid {
   margin-bottom: 20px;
   color: #333333;
   text-align: center;
-  background: rgba(142, 192, 94, 0.5);
+  background: rgba(142, 192, 94, 0.75);
 }
 
 .appbox-header > img {
@@ -10516,4 +10533,9 @@ textarea#userid {
 
 .appbox-content h2 {
   color: #000;
+}
+
+.appbox-btn {
+  font-family: 'Montserrat', 'Sanchez', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
 }
