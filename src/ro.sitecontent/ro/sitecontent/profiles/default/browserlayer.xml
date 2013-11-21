@@ -1,0 +1,6 @@
+<layers>
+    <layer
+        name="ro.sitecontent.layer"
+        interface="ro.sitecontent.interfaces.IRoSiteContent"
+    />
+</layers>

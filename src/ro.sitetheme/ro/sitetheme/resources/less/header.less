@@ -67,14 +67,17 @@
     padding-top: 0;
     margin-bottom: 0;
     background: @app-gray-light;
-    @media (min-width: @screen-md) {
+    @media (min-width: @screen-sm) {
         background: url(../../assets/img/header-bg.jpg) no-repeat 50% 0 @app-gray-light;
         height: 725px;
-        border-bottom: (@navbar-height * 4) solid @app-gray-light;
+        border-bottom: (@navbar-height * 2) solid @app-gray-light;
         &.app-header-frontpage {
             height: 725px;
             border-bottom: (@navbar-height * 4) solid @app-gray-light;
         }
+    }
+    @media (min-width: @screen-sm) {
+        border-bottom: (@navbar-height * 4) solid @app-gray-light;
     }
 }
 
@@ -118,8 +121,14 @@
 
 .app-header-title {
     .text-center();
-    margin-top: -(@navbar-height * 2);
-    color: #fff;
-    font-size: (@font-size-base * 4.5);
-    text-shadow: -1px -1px @gray, -2px -2px @gray;
+    font-size: (@font-size-base * 2.5);
+    @media (min-width: @screen-sm) {
+        //margin-top: -(@navbar-height * 2);
+        color: #fff;
+        font-size: (@font-size-base * 4.5);
+        text-shadow: -1px -1px @gray, -2px -2px @gray;
+    }
+    @media (min-width: @screen-md) {
+        margin-top: -(@navbar-height * 2);
+    }
 }

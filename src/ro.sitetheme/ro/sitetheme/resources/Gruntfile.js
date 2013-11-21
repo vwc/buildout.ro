@@ -164,8 +164,8 @@ module.exports = function (grunt) {
                 pattern: '../../assets/',
                 replacement: '/++theme++ro.sitetheme/assets/'
             },
-            'compile-template-consulting': {
-                path: 'dist/consulting.html',
+            'compile-template-work-fm': {
+                path: 'dist/work-fm.html',
                 pattern: '../../assets/',
                 replacement: '/++theme++ro.sitetheme/assets/'
             }

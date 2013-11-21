@@ -33,13 +33,17 @@
 
 .app-content {
     margin-bottom: (@line-height-computed * 2);
-    &.app-content-tiles {
-        margin-top: -(@navbar-height * 4);
+    @media (min-width: @screen-md) {
+        &.app-content-tiles {
+            margin-top: -(@navbar-height * 4);
+        }
     }
 }
 
-.app-content-body {
-    margin-top: -(@navbar-height * 1.5);
+ @media (min-width: @screen-md) {
+    .app-content-body {
+        margin-top: -(@navbar-height * 1.5);
+    }
 }
 
 .section-front-page .app-content-body {

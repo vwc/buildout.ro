@@ -10358,14 +10358,20 @@ dd.image-caption {
   background: #e3e4e5;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .app-header {
     height: 725px;
     background: url(../../assets/img/header-bg.jpg) no-repeat 50% 0 #e3e4e5;
-    border-bottom: 200px solid #e3e4e5;
+    border-bottom: 100px solid #e3e4e5;
   }
   .app-header.app-header-frontpage {
     height: 725px;
+    border-bottom: 200px solid #e3e4e5;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-header {
     border-bottom: 200px solid #e3e4e5;
   }
 }
@@ -10425,11 +10431,22 @@ dd.image-caption {
 }
 
 .app-header-title {
-  margin-top: -100px;
-  font-size: 63px;
-  color: #fff;
+  font-size: 35px;
   text-align: center;
-  text-shadow: -1px -1px #555555, -2px -2px #555555;
+}
+
+@media (min-width: 768px) {
+  .app-header-title {
+    font-size: 63px;
+    color: #fff;
+    text-shadow: -1px -1px #555555, -2px -2px #555555;
+  }
+}
+
+@media (min-width: 992px) {
+  .app-header-title {
+    margin-top: -100px;
+  }
 }
 
 .app-simple {
@@ -10598,12 +10615,16 @@ textarea#userid {
   margin-bottom: 40px;
 }
 
-.app-content.app-content-tiles {
-  margin-top: -200px;
+@media (min-width: 992px) {
+  .app-content.app-content-tiles {
+    margin-top: -200px;
+  }
 }
 
-.app-content-body {
-  margin-top: -75px;
+@media (min-width: 992px) {
+  .app-content-body {
+    margin-top: -75px;
+  }
 }
 
 .section-front-page .app-content-body {
