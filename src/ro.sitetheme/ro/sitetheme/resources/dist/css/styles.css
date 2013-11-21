@@ -10369,7 +10369,8 @@ dd.image-caption {
   }
 }
 
-.section-work-fm .app-header {
+.section-work-fm .app-header,
+.section-imprint .app-header {
   background-position: 50% -550px;
 }
 
@@ -10611,6 +10612,10 @@ textarea#userid {
   color: #333333;
   text-align: center;
   background: rgba(142, 192, 94, 0.75);
+}
+
+.appbox.appbox-content {
+  text-align: left;
 }
 
 .appbox-header > img {
