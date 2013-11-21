@@ -10615,7 +10615,7 @@ textarea#userid {
   margin-bottom: 40px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .app-content.app-content-tiles {
     margin-top: -200px;
   }
