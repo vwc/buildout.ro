@@ -38,6 +38,21 @@
     }
 }
 
+.app-content-body {
+    margin-top: -(@navbar-height * 1.5);
+}
+
+.section-front-page .app-content-body {
+    margin-top: 0;
+}
+
+.app-page {
+    background: rgba(142, 192, 94, 0.75);
+    &.app-page-opaque {
+        background:transparent;
+    }
+}
+
 .app-page-default {
     border-top: 1px solid @app-primary;
     padding-top: @line-height-computed;

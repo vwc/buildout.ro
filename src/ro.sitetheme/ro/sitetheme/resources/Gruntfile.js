@@ -216,6 +216,7 @@ module.exports = function (grunt) {
     grunt.registerTask('copy-templates', '', function () {
         grunt.file.copy('_site/index.html', 'dist/index.html');
         grunt.file.copy('_site/signin/index.html', 'dist/signin.html');
+        grunt.file.copy('_site/theme/index.html', 'dist/theme.html');
         grunt.file.copy('_site/frontpage/index.html', 'dist/frontpage.html');
         grunt.file.copy('_site/consulting/index.html', 'dist/consulting.html');
         grunt.file.copy('_site/work-fm/index.html', 'dist/work-fm.html');

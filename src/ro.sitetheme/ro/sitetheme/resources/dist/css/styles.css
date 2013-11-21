@@ -10360,8 +10360,9 @@ dd.image-caption {
 
 @media (min-width: 992px) {
   .app-header {
-    height: 525px;
+    height: 725px;
     background: url(../../assets/img/header-bg.jpg) no-repeat 50% 0 #e3e4e5;
+    border-bottom: 200px solid #e3e4e5;
   }
   .app-header.app-header-frontpage {
     height: 725px;
@@ -10599,6 +10600,22 @@ textarea#userid {
 
 .app-content.app-content-tiles {
   margin-top: -200px;
+}
+
+.app-content-body {
+  margin-top: -75px;
+}
+
+.section-front-page .app-content-body {
+  margin-top: 0;
+}
+
+.app-page {
+  background: rgba(142, 192, 94, 0.75);
+}
+
+.app-page.app-page-opaque {
+  background: transparent;
 }
 
 .app-page-default {

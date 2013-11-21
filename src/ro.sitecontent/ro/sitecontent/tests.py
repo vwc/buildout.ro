@@ -52,6 +52,22 @@ def test_suite():
 
         # -*- extra stuff goes here -*-
 
+        # Integration tests for JobOpening
+        ztc.ZopeDocFileSuite(
+            'JobOpening.txt',
+            package='ro.sitecontent',
+            optionflags = OPTION_FLAGS,
+            test_class=TestCase),
+
+
+        # Integration tests for JobFolder
+        ztc.ZopeDocFileSuite(
+            'JobFolder.txt',
+            package='ro.sitecontent',
+            optionflags = OPTION_FLAGS,
+            test_class=TestCase),
+
+
         # Integration tests for ContentPage
         ztc.ZopeDocFileSuite(
             'ContentPage.txt',
