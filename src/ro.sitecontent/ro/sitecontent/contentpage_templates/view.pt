@@ -18,9 +18,9 @@
         tal:content="context/Description" />
   
       <div class="page-body">
-        <div class="alert alert-warning">
-          <p>The body text or content listing will be inserted here</p>
-        </div>
+        <div tal:condition="context/text"
+          tal:content="structure context/text/output" />
+
         <div tal:define="
             Batch python:modules['Products.CMFPlone'].Batch;
             b_size python:int(request.get('b_size', 20));

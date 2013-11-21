@@ -20,10 +20,9 @@
           tal:attributes="href python:portal_url + '/work-fm'">Work FM <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li><a href="#" tal:attributes="href python:portal_url + '/work-fm/kaufmaennisches-fm/'">Kaufm&auml;nisches FM</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li><a href="#">Separated link</a></li>
-          <li><a href="#">One more separated link</a></li>
+          <li><a href="#" tal:attributes="href python:portal_url + '/work-fm/kaufmaennisches-fm/'">Kaufm&auml;nisches FM</a></li>
+          <li><a href="#" tal:attributes="href python:portal_url + '/work-fm/kaufmaennisches-fm/'">Kaufm&auml;nisches FM</a></li>
+          <li><a href="#" tal:attributes="href python:portal_url + '/work-fm/kaufmaennisches-fm/'">Kaufm&auml;nisches FM</a></li>
         </ul>
       </li>
       <li><a href="#" tal:attributes="href python:portal_url + '/kontakt'">Kontakt</a></li>
