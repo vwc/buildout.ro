@@ -10611,6 +10611,8 @@ textarea#userid {
 }
 
 .app-page {
+  min-height: 450px;
+  padding-bottom: 20px;
   background: rgba(142, 192, 94, 0.75);
 }
 

@@ -154,6 +154,11 @@ module.exports = function (grunt) {
                 pattern: '../../assets/',
                 replacement: '/++theme++ro.sitetheme/assets/'
             },
+            'compile-template-theme': {
+                path: 'dist/theme.html',
+                pattern: '../../assets/',
+                replacement: '/++theme++ro.sitetheme/assets/'
+            },
             'compile-template-frontpage': {
                 path: 'dist/frontpage.html',
                 pattern: '../../assets/',

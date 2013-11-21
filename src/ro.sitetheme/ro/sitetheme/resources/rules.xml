@@ -17,7 +17,7 @@
     <!-- Front page -->
     <theme href="dist/frontpage.html" css:if-content="body.section-front-page" />
     <!-- Section Consulting -->
-     <theme href="dist/consulting.html" css:if-content="body.section-consulting" />
+     <theme href="dist/work-fm.html" css:if-content="body.section-work-fm" />
 
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
