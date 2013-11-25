@@ -20,6 +20,8 @@ from plone.formwidget.contenttree import ObjPathSourceBinder
 
 from plone.app.contentlisting.interfaces import IContentListing
 
+from ro.sitecontent.jobopening import IJobOpening
+
 from ro.sitecontent import MessageFactory as _
 
 
@@ -40,12 +42,26 @@ class View(grok.View):
 
     def update(self):
         self.has_folders = len(self.job_folders()) > 0
+        self.has_openings = len(self.job_openings() > 0)
 
     def job_folders(self):
         context = aq_inner(self.context)
         catalog = api.portal.get_tool(name='portal_catalog')
         results = catalog(object_provides=IJobFolder.__identifier__,
                           review_state='published',
+                          path=dict(query='/'.join(context.getPhysicalPath()),
+                                    depth=1),
+                          sort_on='getObjPositionInParent')
+        items = IContentListing(results)
+        return items
+
+    def job_openings(self):
+        context = aq_inner(self.context)
+        catalog = api.portal.get_tool(name='portal_catalog')
+        results = catalog(object_provides=IJobOpening.__identifier__,
+                          review_state='published',
+                          path=dict(query='/'.join(context.getPhysicalPath()),
+                                    depth=1),
                           sort_on='getObjPositionInParent')
         items = IContentListing(results)
         return items

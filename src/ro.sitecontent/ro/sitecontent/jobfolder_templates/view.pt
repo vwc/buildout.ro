@@ -10,26 +10,28 @@
 <metal:main fill-slot="main">
   <metal:content-core define-macro="main">
 
-  <div class="row"
-    tal:define="Batch python:modules['Products.CMFPlone'].Batch;
-                b_size python:int(request.get('b_size', 20));
-                b_start python:int(request.get('b_start', 0));
-                results python:context.restrictedTraverse('@@folderListing')(batch=True, b_size=b_size, b_start=b_start);
-                batch python:Batch(results, b_size, b_start);">
-      <tal:block tal:repeat="item results">
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <div class="appbox">
-            <div class="appbox-content">
-              <h2 tal:content="item/Title" />
-              <p tal:content="item/Description" />
-              <a class="btn btn-primary app-btn"
-                tal:attributes="href item/getURL">Mehr</a>
+  <tal:block tal:condition="view/has_folders">
+    <div class="row"
+      tal:define="Batch python:modules['Products.CMFPlone'].Batch;
+                  b_size python:int(request.get('b_size', 20));
+                  b_start python:int(request.get('b_start', 0));
+                  results view/job_folders;
+                  batch python:Batch(results, b_size, b_start);">
+        <tal:block tal:repeat="item results">
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="appbox">
+              <div class="appbox-content">
+                <h2 tal:content="item/Title" />
+                <p tal:content="item/Description" />
+                <a class="btn btn-primary app-btn"
+                  tal:attributes="href item/getURL">Mehr</a>
+              </div>
             </div>
           </div>
-        </div>
-      </tal:block>
-    <div metal:use-macro="context/batch_macros/macros/navigation" />
-  </div>
+        </tal:block>
+      <div metal:use-macro="context/batch_macros/macros/navigation" />
+    </div>
+  </tal:block>
 
   </metal:content-core>
 </metal:main>
