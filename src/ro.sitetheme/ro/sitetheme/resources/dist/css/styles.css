@@ -10362,17 +10362,11 @@ dd.image-caption {
   .app-header {
     height: 725px;
     background: url(../../assets/img/header-bg.jpg) no-repeat 50% 0 #e3e4e5;
-    border-bottom: 100px solid #e3e4e5;
+    border-bottom: 200px solid #e3e4e5;
   }
   .app-header.app-header-frontpage {
-    height: 725px;
-    border-bottom: 200px solid #e3e4e5;
-  }
-}
-
-@media (min-width: 768px) {
-  .app-header {
-    border-bottom: 200px solid #e3e4e5;
+    height: 775px;
+    border-bottom: 250px solid #e3e4e5;
   }
 }
 
@@ -10410,7 +10404,7 @@ dd.image-caption {
   .app-header-claim {
     width: 480px;
     height: 20px;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
   }
   .app-header-claim:before,
   .app-header-claim:after {
