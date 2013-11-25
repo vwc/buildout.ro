@@ -80,12 +80,45 @@
 }
 
 .appbox-content {
-    h2 {
+    h2, h3 {
         color: #000;
     }
+    @media (min-width: @screen-md) {
+        h2 {
+            font-size: floor(@font-size-base * 1.8);
+        }
+    }
+}
+
+.appbox-footer {
+    text-align: left;
 }
 
 .appbox-btn {
     font-family: @headings-font-family;
     text-transform: uppercase;
+}
+
+// INquiry form
+
+.app-form {
+    padding: @line-height-computed;
+    @media (min-width: @screen-sm) {
+        .control-label {
+            height: @input-height-base;
+            margin-right: -15px;
+            text-align: left;
+            background: @input-group-addon-bg;
+            color: @app-danger;
+            &.app-form-textarea-label {
+                height: 75px;
+            }
+        }
+    }
+}
+
+.app-form-label {
+    text-align: left;
+    background: @gray-light;
+    color: @app-danger;
 }

@@ -10658,11 +10658,45 @@ textarea#userid {
   margin-left: auto;
 }
 
-.appbox-content h2 {
+.appbox-content h2,
+.appbox-content h3 {
   color: #000;
+}
+
+@media (min-width: 992px) {
+  .appbox-content h2 {
+    font-size: 25px;
+  }
+}
+
+.appbox-footer {
+  text-align: left;
 }
 
 .appbox-btn {
   font-family: 'Montserrat', 'Sanchez', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
+}
+
+.app-form {
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .app-form .control-label {
+    height: 34px;
+    margin-right: -15px;
+    color: #ed6262;
+    text-align: left;
+    background: #eeeeee;
+  }
+  .app-form .control-label.app-form-textarea-label {
+    height: 75px;
+  }
+}
+
+.app-form-label {
+  color: #ed6262;
+  text-align: left;
+  background: #999999;
 }

@@ -42,7 +42,7 @@ class View(grok.View):
 
     def update(self):
         self.has_folders = len(self.job_folders()) > 0
-        self.has_openings = len(self.job_openings() > 0)
+        self.has_openings = len(self.job_openings()) > 0
 
     def job_folders(self):
         context = aq_inner(self.context)
