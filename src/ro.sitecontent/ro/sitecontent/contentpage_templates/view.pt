@@ -21,7 +21,8 @@
         <div tal:condition="context/text"
           tal:content="structure context/text/output" />
 
-        <div tal:define="
+        <div class="row"
+          tal:define="
             Batch python:modules['Products.CMFPlone'].Batch;
             b_size python:int(request.get('b_size', 20));
             b_start python:int(request.get('b_start', 0));

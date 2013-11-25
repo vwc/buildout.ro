@@ -68,16 +68,13 @@
     margin-bottom: 0;
     background: @app-gray-light;
     @media (min-width: @screen-sm) {
-        background: url(../../assets/img/header-bg.jpg) no-repeat 50% 0 @app-gray-light;
         height: 725px;
-        border-bottom: (@navbar-height * 2) solid @app-gray-light;
-        &.app-header-frontpage {
-            height: 725px;
-            border-bottom: (@navbar-height * 4) solid @app-gray-light;
-        }
-    }
-    @media (min-width: @screen-sm) {
         border-bottom: (@navbar-height * 4) solid @app-gray-light;
+        background: url(../../assets/img/header-bg.jpg) no-repeat 50% 0 @app-gray-light;
+        &.app-header-frontpage {
+            height: 775px;
+            border-bottom: (@navbar-height * 5) solid @app-gray-light;
+        }
     }
 }
 
@@ -100,7 +97,7 @@
     text-transform: uppercase;
     @media (min-width: @screen-md) {
         .size(@screen-xs, @line-height-computed);
-        margin-bottom: @navbar-height * 3;
+        margin-bottom: @navbar-height * 4;
         &:before,
         &:after {
             content:"";

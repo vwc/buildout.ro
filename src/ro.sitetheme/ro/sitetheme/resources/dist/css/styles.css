@@ -10362,17 +10362,11 @@ dd.image-caption {
   .app-header {
     height: 725px;
     background: url(../../assets/img/header-bg.jpg) no-repeat 50% 0 #e3e4e5;
-    border-bottom: 100px solid #e3e4e5;
+    border-bottom: 200px solid #e3e4e5;
   }
   .app-header.app-header-frontpage {
-    height: 725px;
-    border-bottom: 200px solid #e3e4e5;
-  }
-}
-
-@media (min-width: 768px) {
-  .app-header {
-    border-bottom: 200px solid #e3e4e5;
+    height: 775px;
+    border-bottom: 250px solid #e3e4e5;
   }
 }
 
@@ -10410,7 +10404,7 @@ dd.image-caption {
   .app-header-claim {
     width: 480px;
     height: 20px;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
   }
   .app-header-claim:before,
   .app-header-claim:after {
@@ -10664,11 +10658,45 @@ textarea#userid {
   margin-left: auto;
 }
 
-.appbox-content h2 {
+.appbox-content h2,
+.appbox-content h3 {
   color: #000;
+}
+
+@media (min-width: 992px) {
+  .appbox-content h2 {
+    font-size: 25px;
+  }
+}
+
+.appbox-footer {
+  text-align: left;
 }
 
 .appbox-btn {
   font-family: 'Montserrat', 'Sanchez', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
+}
+
+.app-form {
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .app-form .control-label {
+    height: 34px;
+    margin-right: -15px;
+    color: #ed6262;
+    text-align: left;
+    background: #eeeeee;
+  }
+  .app-form .control-label.app-form-textarea-label {
+    height: 75px;
+  }
+}
+
+.app-form-label {
+  color: #ed6262;
+  text-align: left;
+  background: #999999;
 }
