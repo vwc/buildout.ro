@@ -16,8 +16,10 @@
     <theme href="dist/signin.html" css:if-content="body.template-mail_password_form" />
     <!-- Front page -->
     <theme href="dist/frontpage.html" css:if-content="body.section-front-page" />
-    <!-- Section Consulting -->
-     <theme href="dist/work-fm.html" css:if-content="body.section-work-fm" />
+    <!-- Section Work FM jobposting edit fix -->
+    <theme href="dist/theme.html" css:if-content="body.portaltype-ro-sitecontent-jobopening" />
+
+    <theme href="dist/work-fm.html" css:if-content="body.section-work-fm" />
 
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
