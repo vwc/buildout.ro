@@ -65,3 +65,17 @@ class View(grok.View):
                           sort_on='getObjPositionInParent')
         items = IContentListing(results)
         return items
+
+    def has_subcontent(self, item):
+        return len(self.get_subcontents(item)) > 0
+
+    def get_subcontents(self, item):
+        context = aq_inner(item)
+        catalog = api.portal.get_tool(name='portal_catalog')
+        results = catalog(object_provides=IJobFolder.__identifier__,
+                          review_state='published',
+                          path=dict(query='/'.join(context.getPhysicalPath()),
+                                    depth=1),
+                          sort_on='getObjPositionInParent')
+        items = IContentListing(results)
+        return items

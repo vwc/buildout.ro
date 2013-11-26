@@ -18,7 +18,11 @@
               <div class="appbox">
                 <div class="appbox-content">
                   <h2 tal:content="item/Title" />
-                  <p tal:content="item/Description"  />
+                  <div class="appbox-subcontent" tal:condition="python:view.has_subcontent(item)">
+                    
+                  </div>
+                </div>
+                <div class="appbox-footer">
                   <a class="btn btn-primary app-btn"
                     tal:attributes="href item/getURL">
                     Mehr
@@ -35,11 +39,12 @@
         tal:define="items view/job_openings">
           <tal:block tal:repeat="item items">
             <div class="col-xs-12 col-sm-6 col-md-3">
-              <div class="appbox">
+              <div class="appbox appbox-content">
                 <div class="appbox-content">
-                  <h2 tal:content="item/Title" />
+                  <h4 tal:content="item/Title" />
                   <p tal:content="item/Description" />
                 </div>
+                <hr>
                 <div class="appbox-footer">
                   <p><a class="appbox-link"
                     tal:attributes="href string:${item/getURL}/@@inquiry-form">
