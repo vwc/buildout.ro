@@ -10670,12 +10670,24 @@ textarea#userid {
 }
 
 .appbox-footer {
+  padding-top: 20px;
   text-align: left;
+  border-top: 1px solid #555555;
 }
 
 .appbox-btn {
   font-family: 'Montserrat', 'Sanchez', "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
+}
+
+.appbox-subcontent {
+  text-align: left;
+}
+
+.appbox-li {
+  padding: 20px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #555555;
 }
 
 .app-form {

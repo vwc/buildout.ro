@@ -70,12 +70,13 @@ class View(grok.View):
         return len(self.get_subcontents(item)) > 0
 
     def get_subcontents(self, item):
-        context = aq_inner(item)
+        context = aq_inner(item.getObject())
         catalog = api.portal.get_tool(name='portal_catalog')
-        results = catalog(object_provides=IJobFolder.__identifier__,
+        results = catalog(object_provides=IJobOpening.__identifier__,
                           review_state='published',
                           path=dict(query='/'.join(context.getPhysicalPath()),
-                                    depth=1),
-                          sort_on='getObjPositionInParent')
+                                    depth=2),
+                          sort_on='modified',
+                          sort_order='reverse')
         items = IContentListing(results)
         return items

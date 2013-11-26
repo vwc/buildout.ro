@@ -12,14 +12,25 @@
 
     <tal:block tal:condition="view/has_folders">
       <div class="row"
-        tal:define="items view/job_folders;">
+        tal:define="items view/job_folders;
+                    toLocalizedTime nocall:context/@@plone/toLocalizedTime">
           <tal:block tal:repeat="item items">
             <div class="col-xs-12 col-sm-6 col-md-3">
               <div class="appbox">
                 <div class="appbox-content">
                   <h2 tal:content="item/Title" />
-                  <div class="appbox-subcontent" tal:condition="python:view.has_subcontent(item)">
-                    
+                  <div class="appbox-subcontent"
+                    tal:define="subitems python:view.get_subcontents(item)">
+                    <tal:items tal:repeat="subitem subitems">
+                      <div class="appbox-li"
+                        tal:define="timestamp python:context.modified().ISO()">
+                        <a class="h5 appbox-li-headline"
+                          tal:attributes="href item/getURL"
+                          tal:content="python:toLocalizedTime(timestamp, long_format=False)" />
+                        <div class="h5 appbox-li-headline"
+                          tal:content="subitem/Title" />
+                      </div>
+                    </tal:items>
                   </div>
                 </div>
                 <div class="appbox-footer">
@@ -44,7 +55,6 @@
                   <h4 tal:content="item/Title" />
                   <p tal:content="item/Description" />
                 </div>
-                <hr>
                 <div class="appbox-footer">
                   <p><a class="appbox-link"
                     tal:attributes="href string:${item/getURL}/@@inquiry-form">
