@@ -10690,6 +10690,10 @@ textarea#userid {
   border-bottom: 1px solid #555555;
 }
 
+.appbox-li:last-child {
+  border-width: 0;
+}
+
 .app-form {
   padding: 0 20px;
 }
