@@ -62,6 +62,7 @@
                   </a></p>
                   <p>
                   <a class="appbox-link"
+                    tal:condition="context/attachment"
                     tal:attributes="href string:${item/getURL}/@@download/attachment/${item/attachment/filename}">
                     <i class="fa fa-arrow-circle-o-down"></i> PDF Download
                   </a></p>
