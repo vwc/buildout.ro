@@ -5,6 +5,7 @@ from plone import api
 from zope.component import getMultiAdapter
 
 from Products.CMFPlone.utils import safe_unicode
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from Products.CMFCore.interfaces import IContentish
 
@@ -23,7 +24,7 @@ class InquiryForm(grok.View):
         required = ('subject', 'email')
         if 'form.button.Submit' in self.request:
             authenticator = getMultiAdapter((context, self.request),
-                                            name=u"autehnticator")
+                                            name=u"authenticator")
             if not authenticator.verify():
                 raise Unauthorized
             form = self.request.form
@@ -51,5 +52,32 @@ class InquiryForm(grok.View):
 
     def process_form(self, data):
         context = aq_inner(self.context)
+        options = data
+        context_url = context.absolute_url()
+        mto = 'anfrage@roconsulting.de'
+        envelope_from = '%s' % data['email']
+        subject = 'Buchungsanfrage von meintophotel.de'
+        options = dict(
+            company=data['company'],
+            position=data['position'],
+            name=data['name'],
+            firstname=data['firstname'],
+            phone=data['phone'],
+            message=data['message'],
+            url=context_url,
+        )
+        msg = ViewPageTemplateFile("inquirymail.pt")(self, **options)
+        api.portal.send_email(
+            recipient=mto,
+            sender=envelope_from,
+            subject=subject,
+            body=msg
+        )
         next_url = context.absolute_url() + '/@@inquiry-processed'
         return self.request.response.redirect(next_url)
+
+    def default_value(self, error):
+        value = ''
+        if error['active'] is False:
+            value = error['msg']
+        return value

@@ -10280,6 +10280,10 @@ dd.image-caption {
   border-top: 40px solid #ffffff;
 }
 
+.app-decoarrow-primary {
+  border-top: 40px solid rgba(142, 192, 94, 0.75);
+}
+
 .app-brandbar {
   padding: 20px;
 }
@@ -10380,6 +10384,10 @@ dd.image-caption {
 .section-work-fm .app-header,
 .section-imprint .app-header {
   background-position: 50% -550px;
+}
+
+.section-kontakt .app-header {
+  background-position: 50% -1080px;
 }
 
 .app-header-claim {
@@ -10549,6 +10557,10 @@ dd.image-caption {
   clear: both;
 }
 
+.btn {
+  border-radius: 0;
+}
+
 #userid {
   display: block;
   width: 100%;
@@ -10652,7 +10664,7 @@ textarea#userid {
 
 .page-content-primary {
   min-height: 450px;
-  padding: 0 20px 20px;
+  padding: 10px 20px 20px;
   background: rgba(142, 192, 94, 0.75);
 }
 
@@ -10720,6 +10732,9 @@ textarea#userid {
 }
 
 @media (min-width: 768px) {
+  .app-form .form-group {
+    margin-left: 0;
+  }
   .app-form .control-label {
     height: 34px;
     margin-right: -15px;
@@ -10730,6 +10745,10 @@ textarea#userid {
   .app-form .control-label.app-form-textarea-label {
     height: 75px;
   }
+}
+
+.app-form .app-form-actions {
+  margin: 20px;
 }
 
 .app-form-label {

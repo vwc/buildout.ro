@@ -22,6 +22,7 @@
     <theme href="dist/work-fm.html" css:if-content="body.section-consulting" />
     <theme href="dist/work-fm.html" css:if-content="body.section-hr-management" />
     <theme href="dist/work-fm.html" css:if-content="body.section-work-fm" />
+    <theme href="dist/work-fm.html" css:if-content="body.section-kontakt" />
 
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
