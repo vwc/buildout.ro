@@ -46,3 +46,9 @@ class View(grok.View):
     def has_subcontent(self):
         context = aq_inner(self.context)
         return len(context.items()) > 0
+
+    def computed_klass(self):
+        klass = 'page-content page-content-primary'
+        if self.has_items:
+            klass = 'page-content'
+        return klass

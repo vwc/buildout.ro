@@ -9,7 +9,9 @@
 
 <metal:main fill-slot="main">
   <metal:content-core define-macro="main">
-    <div class="page-content page-content-primary">
+    <div class="page-content page-content-primary"
+        tal:define="klass view/computed_klass"
+        tal:attributes="class klass">
         <div class="page-content-header"
             tal:condition="not:view/has_items">
             <div class="page-header">
