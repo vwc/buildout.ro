@@ -57,7 +57,6 @@
                 </div>
                 <div class="appbox-footer">
                   <p tal:define="next_url python:view.inquiry_url(item)">
-                    <span tal:replace="next_url" />
                     <a class="appbox-link"
                         tal:attributes="href next_url">
                         <i class="fa fa-envelope-o"></i> Anfrage
