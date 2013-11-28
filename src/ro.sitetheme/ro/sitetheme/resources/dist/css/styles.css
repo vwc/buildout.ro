@@ -10297,6 +10297,10 @@ dd.image-caption {
   text-align: center;
 }
 
+.app-brand:hover {
+  color: #5a5f64;
+}
+
 .app-brand > img {
   display: block;
   margin-right: auto;
@@ -10620,6 +10624,7 @@ textarea#userid {
 }
 
 .app-navbar .navbar-nav > .nav-item-home > a {
+  font-size: 21px;
   color: #ed6262;
 }
 
@@ -10696,6 +10701,21 @@ textarea#userid {
   color: #000;
 }
 
+.appbox-content .appbox-content-headline {
+  margin-bottom: 20px;
+  font-family: 'Montserrat', 'Sanchez', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.appbox-content .appbox-content-headline small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999999;
+}
+
 @media (min-width: 992px) {
   .appbox-content h2 {
     font-size: 25px;
@@ -10706,6 +10726,10 @@ textarea#userid {
   padding-top: 20px;
   text-align: left;
   border-top: 1px solid #555555;
+}
+
+.appbox-footer.appbox-footer-centered {
+  text-align: center;
 }
 
 .appbox-btn {

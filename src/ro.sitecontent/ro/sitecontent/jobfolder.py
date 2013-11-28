@@ -78,7 +78,8 @@ class View(grok.View):
                           path=dict(query='/'.join(context.getPhysicalPath()),
                                     depth=2),
                           sort_on='modified',
-                          sort_order='reverse')
+                          sort_order='reverse',
+                          sort_limit=2)[:2]
         items = IContentListing(results)
         return items
 

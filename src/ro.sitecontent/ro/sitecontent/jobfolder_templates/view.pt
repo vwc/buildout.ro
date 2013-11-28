@@ -33,10 +33,11 @@
                     </tal:items>
                   </div>
                 </div>
-                <div class="appbox-footer">
+                <div class="appbox-footer appbox-footer-centered">
                   <a class="btn btn-primary app-btn"
-                    tal:attributes="href item/getURL">
-                    Mehr
+                    tal:attributes="href item/getURL"
+                    i18n:translate="">
+                    More job openings
                   </a>
                 </div>
               </div>
@@ -46,32 +47,56 @@
     </tal:block>
 
     <tal:block tal:condition="view/has_openings">
-      <div class="row"
-        tal:define="items view/job_openings">
-          <tal:block tal:repeat="item items">
-            <div class="col-xs-12 col-sm-6 col-md-3">
-              <div class="appbox appbox-content">
-                <div class="appbox-content">
-                  <h4 tal:content="item/Title" />
-                  <p tal:content="item/Description" />
+        <div class="row">
+            <div class="col-xs-12 col-md-9">
+                <div class="row"
+                  tal:define="items view/job_openings">
+                    <tal:block tal:repeat="item items">
+                      <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="appbox appbox-content">
+                          <div class="appbox-content">
+                            <div class="appbox-content-headline" tal:content="item/Title" />
+                            <p tal:content="item/Description" />
+                          </div>
+                          <div class="appbox-footer">
+                            <p tal:define="next_url python:view.inquiry_url(item)">
+                              <a class="appbox-link"
+                                  tal:attributes="href next_url">
+                                  <i class="fa fa-envelope-o"></i> Anfrage
+                            </a></p>
+                            <p>
+                            <a class="appbox-link"
+                              tal:condition="exists:context/attachment"
+                              tal:attributes="href string:${item/getURL}/@@download/attachment/${item/attachment/filename}">
+                              <i class="fa fa-arrow-circle-o-down"></i> PDF Download
+                            </a></p>
+                          </div>
+                        </div>
+                      </div>
+                        <tal:clearer tal:define="number repeat/item/number;
+                                                 divcount python:int(number)/3.0">
+                            <span tal:condition="python:divcount % 1 == 0" 
+                                class="clearfix visible-md visible-lg" />
+                        </tal:clearer>
+                    </tal:block>
                 </div>
-                <div class="appbox-footer">
-                  <p tal:define="next_url python:view.inquiry_url(item)">
-                    <a class="appbox-link"
-                        tal:attributes="href next_url">
-                        <i class="fa fa-envelope-o"></i> Anfrage
-                  </a></p>
-                  <p>
-                  <a class="appbox-link"
-                    tal:condition="exists:context/attachment"
-                    tal:attributes="href string:${item/getURL}/@@download/attachment/${item/attachment/filename}">
-                    <i class="fa fa-arrow-circle-o-down"></i> PDF Download
-                  </a></p>
+            </div>
+            <div class="col-x-s12 col-md-3">
+                <div class="appbox">
+                <div class="appbox-content">
+                  <h2>One item from higher up in the hierachry</h2>
+                  <div class="appbox-subcontent">
+                    <p>Content</p>
+                  </div>
+                </div>
+                <div class="appbox-footer appbox-footer-centered">
+                  <a class="btn btn-primary app-btn" href="">
+                    Mehr
+                  </a>
                 </div>
               </div>
             </div>
-          </tal:block>
-      </div>
+        </div>
     </tal:block>
 
   </metal:content-core>
