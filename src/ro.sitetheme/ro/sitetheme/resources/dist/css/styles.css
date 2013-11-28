@@ -9645,6 +9645,7 @@ div.field label span.formHelp {
 }
 
 div.field div.label,
+div.field span.label,
 div.field label {
   padding: 0;
   font-size: 14px;
@@ -9656,6 +9657,7 @@ div.field label {
 }
 
 div.field div.label span.formHelp,
+div.field span.label span.formHelp,
 div.field label span.formHelp {
   display: block;
   margin-top: 5px;
@@ -9705,12 +9707,17 @@ div.overlay-iframe {
 div.overlaybg div.close,
 div.overlay div.close {
   position: absolute;
-  top: -14px;
-  left: -14px;
+  top: 10px;
+  left: 10px;
   width: 30px;
   height: 30px;
   cursor: pointer;
   background-image: url(../images/pb_close.png);
+}
+
+div.overlaybg div.close:after,
+div.overlay div.close:after {
+  content: '\d7';
 }
 
 .pb-ajax {
@@ -9769,7 +9776,7 @@ div.overlay #createGroup fieldset {
 }
 
 div.overlay p {
-  margin-bottom: 1.428571429;
+  margin-bottom: 20px;
 }
 
 div.overlay label {
@@ -10443,6 +10450,14 @@ dd.image-caption {
   }
 }
 
+.app-header-title > a {
+  color: #fff;
+}
+
+.app-header-title > a:hover {
+  text-decoration: none;
+}
+
 .app-simple {
   margin-top: 50px;
   border-top: 10px solid #ed6262;
@@ -10633,6 +10648,12 @@ textarea#userid {
 
 .app-page.app-page-opaque {
   background: transparent;
+}
+
+.page-content-primary {
+  min-height: 450px;
+  padding-bottom: 20px;
+  background: rgba(142, 192, 94, 0.75);
 }
 
 .app-page-default {

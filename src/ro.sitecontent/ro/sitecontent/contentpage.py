@@ -1,3 +1,4 @@
+from Acquisition import aq_inner
 from five import grok
 
 from z3c.form import group, field
@@ -38,3 +39,10 @@ class View(grok.View):
     grok.context(IContentPage)
     grok.require('zope2.View')
     grok.name('view')
+
+    def update(self):
+        self.has_items = self.has_subcontent()
+
+    def has_subcontent(self):
+        context = aq_inner(self.context)
+        return len(context.items()) > 0

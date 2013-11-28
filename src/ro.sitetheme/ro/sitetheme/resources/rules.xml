@@ -19,6 +19,8 @@
     <!-- Section Work FM jobposting edit fix -->
     <theme href="dist/theme.html" css:if-content="body.portaltype-ro-sitecontent-jobopening" />
 
+    <theme href="dist/work-fm.html" css:if-content="body.section-consulting" />
+    <theme href="dist/work-fm.html" css:if-content="body.section-hr-management" />
     <theme href="dist/work-fm.html" css:if-content="body.section-work-fm" />
 
     <!-- Rules applying to a standard Plone web page -->
@@ -76,8 +78,8 @@
             css:theme-children="#app-navbar-nav" />
 
         <!-- Breadcrumbs -->
-        <replace css:content-children='#portal-breadcrumbs'
-            css:theme-children='#breadcrumbs' />
+        <replace css:content-children='#portal-globalnav li.selected'
+            css:theme-children='.app-header-title' />
 
         <!-- Login form rules -->
         <replace css:content-children="#content-core"
