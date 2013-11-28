@@ -14,7 +14,7 @@
         tal:attributes="class klass">
         <div class="page-content-header"
             tal:condition="not:view/has_items">
-            <div class="page-header">
+            <div class="app-page-header">
               <h2 tal:content="context/Title">Title inserted here</h2>
             </div>
         

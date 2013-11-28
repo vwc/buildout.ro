@@ -29,3 +29,14 @@
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
+
+<div class="app-footer-navbar" id="app-footer-navbar"
+    tal:define="portal_url viewlet/portal_url">
+  <p>
+    <a href="" tal:attributes="href python:portal_url + '/consulting'" rel="nofollow">Consulting</a> &ndash;
+    <a href="" tal:attributes="href python:portal_url + '/hr-management'" rel="nofollow">HR Management</a> &ndash;
+    <a href="" tal:attributes="href python:portal_url + '/work-fm'" rel="nofollow">Work-FM</a><br>
+    <a href="" tal:attributes="href python:portal_url + '/kontakt'" rel="nofollow">Kontakt</a> &ndash;
+    <a href="" tal:attributes="href python:portal_url + '/impressum'" rel="nofollow">Impressum</a>
+  </p>
+</div>

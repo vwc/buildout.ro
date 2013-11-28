@@ -19,13 +19,14 @@
     <div class="page-content page-content-primary">
       <div class="page-body">
 
-        <div class="page-header">
+        <div class="app-page-header">
           <h2 i18n:translate="">Inquiry form</h2>
         </div>
 
             <div class="form-group field"
                 tal:define="error errors/subject | nothing;
-                            err_msg python:error and error['active'] == True"
+                            err_msg python:error and error['active'] == True;
+                            value request/subject | nothing"
                 tal:attributes="class python:err_msg and 'form-group has-error' or 'form-group'">
                 <label class="col-sm-2 control-label"
                     for="subject">
@@ -36,7 +37,7 @@
                         id="subject"
                         type="text"
                         name="subject"
-                        tal:attributes="value python:error and view.default_value(error) or ''" />
+                        tal:attributes="value python:error and view.default_value(error) or value" />
                     <div class="help-block error"
                       tal:condition="err_msg">
                       <i class="fa fa-exclamation-triangle"></i>

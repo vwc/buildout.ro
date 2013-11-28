@@ -9,8 +9,8 @@
 
 <metal:main fill-slot="main">
   <metal:content-core define-macro="main">
-    <div class="page-content">
-      <div class="page-header">
+    <div class="app-page-content">
+      <div class="app-page-header">
         <h2 tal:content="context/Title">Title inserted here</h2>
       </div>
   

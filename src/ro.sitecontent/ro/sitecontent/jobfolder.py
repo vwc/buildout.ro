@@ -1,3 +1,4 @@
+import urllib2
 from Acquisition import aq_inner
 from five import grok
 from plone import api
@@ -80,3 +81,20 @@ class View(grok.View):
                           sort_order='reverse')
         items = IContentListing(results)
         return items
+
+    def inquiry_url(self, item):
+        base_url = item.getURL()
+        title = self._url_quote(item.Title())
+        params = '/@@inquiry-form?subject={0}'.format(title)
+        url = base_url + params
+        return url
+
+    def _url_quote(self, value):
+        if value:
+            try:
+                encoded_value = urllib2.quote(value.encode('utf-8'))
+            except:
+                encoded_value = urllib2.quote(value)
+            return encoded_value
+        else:
+            return ''
