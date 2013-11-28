@@ -1,0 +1,95 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-11-28 14:30+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: ro.sitecontent\n"
+
+#: ./../profiles/default/types/ro.sitecontent.jobfolder.xml
+msgid "A folder holding job openings"
+msgstr ""
+
+#: ./../profiles/default/types/ro.sitecontent.contentpage.xml
+msgid "A folderish content page"
+msgstr ""
+
+#: ./../profiles/default/types/ro.sitecontent.jobopening.xml
+msgid "A single job opening"
+msgstr ""
+
+#: ./../jobopening.py:17
+msgid "Attachement"
+msgstr ""
+
+#: ./../contentpage.py:29
+msgid "Body Text"
+msgstr ""
+
+#: ./../inquiry_templates/inquiryform.pt:55
+msgid "Company"
+msgstr ""
+
+#: ./../profiles/default/types/ro.sitecontent.contentpage.xml
+msgid "ContentPage"
+msgstr ""
+
+#: ./../inquiry_templates/inquiryform.pt:161
+msgid "Email"
+msgstr ""
+
+#: ./../inquiry_templates/inquiryform.pt:119
+msgid "Firstname"
+msgstr ""
+
+#: ./../inquiry_templates/inquiryform.pt:23
+msgid "Inquiry form"
+msgstr ""
+
+#: ./../profiles/default/types/ro.sitecontent.jobfolder.xml
+msgid "JobFolder"
+msgstr ""
+
+#: ./../profiles/default/types/ro.sitecontent.jobopening.xml
+msgid "JobOpening"
+msgstr ""
+
+#: ./../inquiry_templates/inquiryform.pt:98
+msgid "Name"
+msgstr ""
+
+#: ./../inquiry_templates/inquiryform.pt:140
+msgid "Phone"
+msgstr ""
+
+#: ./../jobopening.py:18
+msgid "Please upload additional attachment preferable as pdf"
+msgstr ""
+
+#: ./../inquiry_templates/inquiryform.pt:77
+msgid "Position"
+msgstr ""
+
+#: ./../inquiry_templates/inquiryform.pt:33
+msgid "Subject"
+msgstr ""
+
+#: ./../inquiry.py:40
+msgid "This field is required"
+msgstr ""
+
+#: ./../inquiry_templates/inquiryform.pt:182
+msgid "Your message"
+msgstr ""
+
