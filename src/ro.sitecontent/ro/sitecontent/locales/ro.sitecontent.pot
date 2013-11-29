@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-11-29 09:25+0000\n"
+"POT-Creation-Date: 2013-11-29 16:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,6 +37,11 @@ msgstr ""
 msgid "Body Text"
 msgstr ""
 
+#: ./../contentpage_templates/view.pt:67
+#: ./../inquiry_templates/inquiryprocessed.pt:24
+msgid "Close"
+msgstr ""
+
 #: ./../inquiry_templates/inquiryform.pt:55
 msgid "Company"
 msgstr ""
@@ -54,6 +59,7 @@ msgid "Firstname"
 msgstr ""
 
 #: ./../inquiry_templates/inquiryform.pt:23
+#: ./../inquiry_templates/inquiryprocessed.pt:17
 msgid "Inquiry form"
 msgstr ""
 
@@ -90,8 +96,16 @@ msgstr ""
 msgid "Subject"
 msgstr ""
 
+#: ./../inquiry_templates/inquiryform.pt:205
+msgid "Submit"
+msgstr ""
+
 #: ./../inquiry.py:40
 msgid "This field is required"
+msgstr ""
+
+#: ./../inquiry_templates/inquiryprocessed.pt:20
+msgid "Your inquiry has been forwarded to us and will be processed as soon as possible. Thank you for your interest. have a nice day."
 msgstr ""
 
 #: ./../inquiry_templates/inquiryform.pt:182
@@ -99,6 +113,7 @@ msgid "Your message"
 msgstr ""
 
 #: ./../contentpage_templates/view.pt:46
+#: ./../jobfolder_templates/view.pt:92
 msgid "read more"
 msgstr ""
 
