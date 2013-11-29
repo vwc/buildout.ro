@@ -56,6 +56,22 @@ class View(grok.View):
         items = IContentListing(results)
         return items
 
+    def display_parent_pointer(self, item):
+        context = aq_inner(self.context)
+        unwanted = ('work-fm', context.getId())
+        display = True
+        if item.getId() in unwanted:
+            display = False
+        return display
+
+    def get_all_job_folders(self):
+        catalog = api.portal.get_tool(name='portal_catalog')
+        results = catalog(object_provides=IJobFolder.__identifier__,
+                          review_state='published',
+                          sort_on='getObjPositionInParent')
+        items = IContentListing(results)
+        return items
+
     def job_openings(self):
         context = aq_inner(self.context)
         catalog = api.portal.get_tool(name='portal_catalog')

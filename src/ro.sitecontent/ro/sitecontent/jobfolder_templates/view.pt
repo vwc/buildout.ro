@@ -23,7 +23,7 @@
                     tal:define="subitems python:view.get_subcontents(item)">
                     <tal:items tal:repeat="subitem subitems">
                       <div class="appbox-li"
-                        tal:define="timestamp python:context.modified().ISO()">
+                        tal:define="timestamp python:subitem.modified.ISO()">
                         <a class="h5 appbox-li-headline"
                           tal:attributes="href item/getURL"
                           tal:content="python:toLocalizedTime(timestamp, long_format=False)" />
@@ -82,19 +82,20 @@
                 </div>
             </div>
             <div class="col-x-s12 col-md-3">
-                <div class="appbox">
-                <div class="appbox-content">
-                  <h2>One item from higher up in the hierachry</h2>
-                  <div class="appbox-subcontent">
-                    <p>Content</p>
-                  </div>
-                </div>
-                <div class="appbox-footer appbox-footer-centered">
-                  <a class="btn btn-primary app-btn" href="">
-                    Mehr
-                  </a>
-                </div>
-              </div>
+                <tal:block tal:repeat="item view/get_all_job_folders">
+                    <div class="appbox"
+                        tal:condition="python:view.display_parent_pointer(item)">
+                    <div class="appbox-content">
+                      <h2 tal:content="item/Title">One item from higher up in the hierachry</h2>
+                    </div>
+                    <div class="appbox-footer appbox-footer-centered">
+                      <a class="btn btn-primary app-btn" href=""
+                        tal:attributes="href item/getURL">
+                        read more
+                      </a>
+                    </div>
+                    </div>
+                </tal:block>
             </div>
         </div>
     </tal:block>
