@@ -43,7 +43,7 @@
                     tal:define="box_idx repeat/item/index">
                     <h2 tal:content="item/Title" />
                     <p tal:content="item/Description" />
-                    <button class="btn btn-primary btn" data-toggle="modal" data-target="#myModal"
+                    <button class="btn btn-primary appbox-btn" data-toggle="modal" data-target="#myModal"
                         tal:attributes="data-target string:#appboxModal${box_idx}"
                         i18n:translate="">
                       read more
