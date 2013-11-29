@@ -12,10 +12,16 @@
   <div class="collapse navbar-collapse navbar-main-collapse">
     <ul class="nav navbar-nav navbar-right" id="app-navbar-nav"
       tal:define="portal_url viewlet/portal_url">
-      <li class="nav-item nav-item-home"><a href="/" tal:attributes="href portal_url"><i class="fa fa-home"></i></a></li>
-      <li><a href="#" tal:attributes="href python:portal_url + '/consulting'">Consulting</a></li>
-      <li><a href="#" tal:attributes="href python:portal_url + '/hr-management'">HR Management</a></li>
-      <li class="dropdown">
+      <li class="nav-item nav-item-home"
+        tal:define="marker python:viewlet.active_marker('front-page')"
+        tal:attributes="class python:marker and 'nav-item nav-item-home active' or 'nav-item nav-item-home'"><a href="/" tal:attributes="href portal_url"><i class="fa fa-home"></i></a></li>
+      <li tal:define="marker python:viewlet.active_marker('consulting')"
+        tal:attributes="class python:marker and 'nav-item active' or 'nav-item'"><a href="#" tal:attributes="href python:portal_url + '/consulting'">Consulting</a></li>
+      <li tal:define="marker python:viewlet.active_marker('hr-management')"
+        tal:attributes="class python:marker and 'nav-item active' or 'nav-item'"><a href="#" tal:attributes="href python:portal_url + '/hr-management'">HR Management</a></li>
+      <li class="dropdown"
+        tal:define="marker python:viewlet.active_marker('work-fm')"
+        tal:attributes="class python:marker and 'nav-item active' or 'nav-item'">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
           tal:attributes="href python:portal_url + '/work-fm'">Work FM <b class="caret"></b></a>
         <ul class="dropdown-menu">
@@ -25,7 +31,8 @@
           <li><a href="#" tal:attributes="href python:portal_url + '/work-fm/branchennahe-jobangebote/'">Branchennahe Jobangebote</a></li>
         </ul>
       </li>
-      <li><a href="#" tal:attributes="href python:portal_url + '/kontakt'">Kontakt</a></li>
+      <li tal:define="marker python:viewlet.active_marker('kontakt')"
+        tal:attributes="class python:marker and 'nav-item active' or 'nav-item'"><a href="#" tal:attributes="href python:portal_url + '/kontakt'">Kontakt</a></li>
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>

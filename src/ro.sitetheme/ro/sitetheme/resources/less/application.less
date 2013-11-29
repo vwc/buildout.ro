@@ -24,12 +24,24 @@
     font-weight: 700;
     text-transform: uppercase;
     .navbar-nav > .nav-item-home > a {
-        color: @brand-primary;
+        //color: @brand-primary;
         font-size: @font-size-base * 1.5;
+        background: transparent;
+        &.active {
+            background: transparent;
+        }
     }
     .navbar-nav > .dropdown > a .caret {
         border-bottom-color: @brand-primary;
         border-top-color: @brand-primary;
+    }
+    .navbar-nav > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: brand-primary;
+        background-color: @navbar-inverse-link-active-bg;
+      }
     }
 }
 
