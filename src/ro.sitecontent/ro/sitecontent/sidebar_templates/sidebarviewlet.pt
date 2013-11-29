@@ -1,0 +1,44 @@
+<div class="app-sidebar" id="app-sidebar" i18n:domain="ro.sitecontent">
+    <tal:block tal:repeat="item viewlet/content_pages">
+        <div class="appbox"
+                tal:condition="python:viewlet.display_parent_pointer(item)">
+            <div class="appbox-content">
+              <h2 tal:content="item/Title">One item from higher up in the hierachry</h2>
+            </div>
+            <div class="appbox-footer appbox-footer-centered">
+              <a class="btn btn-primary app-btn" href=""
+                tal:attributes="href item/getURL">
+                read more
+              </a>
+            </div>
+        </div>
+    </tal:block>
+
+    <div class="appbox"
+        tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+      <div class="appbox-content">
+        <h2>Work FM</h2>
+        <div class="appbox-subcontent"
+          tal:define="items viewlet/job_openings">
+          <tal:items tal:repeat="item items">
+            <div class="appbox-li"
+              tal:define="timestamp python:item.modified.ISO()">
+              <a class="h5 appbox-li-headline"
+                tal:attributes="href item/getURL"
+                tal:content="python:toLocalizedTime(timestamp, long_format=False)" />
+              <div class="h5 appbox-li-headline"
+                tal:content="item/Title" />
+            </div>
+          </tal:items>
+        </div>
+      </div>
+      <div class="appbox-footer appbox-footer-centered">
+        <a class="btn btn-primary app-btn"
+          tal:attributes="href string:${viewlet/portal_url}/work-fm"
+          i18n:translate="">
+          More job openings
+        </a>
+      </div>
+    </div>
+
+</div>
