@@ -20,8 +20,8 @@
     <theme href="dist/work-fm.html" css:if-content="body.template-inquiry-form" />
     <theme href="dist/theme.html" css:if-content="body.portaltype-ro-sitecontent-jobopening" />
 
-    <theme href="dist/work-fm.html" css:if-content="body.section-consulting" />
-    <theme href="dist/work-fm.html" css:if-content="body.section-hr-management" />
+    <theme href="dist/consulting.html" css:if-content="body.section-consulting" />
+    <theme href="dist/consulting.html" css:if-content="body.section-hr-management" />
     <theme href="dist/work-fm.html" css:if-content="body.section-work-fm" />
 
     <!-- Rules applying to a standard Plone web page -->
@@ -104,13 +104,8 @@
         <replace css:content-children="#viewlet-below-content"
             css:theme-children="#below-main-content" />
 
-        <!-- Columns -->
-        <replace css:content-children="#portal-column-one > *"
-            css:theme-children="#app-sidebar-left" />
-        <replace css:content-children="#portal-column-two > *"
-            css:theme-children="#app-sidebar-right" />
-        <!-- example for the fixed.html template -->
-        <replace css:content-children="#portal-column-two > *"
+        <!-- Custom sidebar viewlet including parent pointers -->
+        <replace css:content-children="#app-sidebar"
             css:theme-children="#app-sidebar" />
 
         <replace css:content-children="#app-footer-navbar"

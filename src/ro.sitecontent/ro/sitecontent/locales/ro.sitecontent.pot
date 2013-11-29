@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-11-28 14:30+0000\n"
+"POT-Creation-Date: 2013-11-29 09:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,6 +65,11 @@ msgstr ""
 msgid "JobOpening"
 msgstr ""
 
+#: ./../jobfolder_templates/view.pt:37
+#: ./../sidebar_templates/sidebarviewlet.pt:36
+msgid "More job openings"
+msgstr ""
+
 #: ./../inquiry_templates/inquiryform.pt:98
 msgid "Name"
 msgstr ""
@@ -91,5 +96,9 @@ msgstr ""
 
 #: ./../inquiry_templates/inquiryform.pt:182
 msgid "Your message"
+msgstr ""
+
+#: ./../contentpage_templates/view.pt:46
+msgid "read more"
 msgstr ""
 

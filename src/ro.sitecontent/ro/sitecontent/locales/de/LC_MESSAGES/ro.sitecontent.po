@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ro.sitecontent\n"
-"POT-Creation-Date: 2013-11-28 14:30+0000\n"
+"POT-Creation-Date: 2013-11-29 09:25+0000\n"
 "PO-Revision-Date: 2013-11-28 15:36+0100\n"
 "Last-Translator: Christoph Boehner <cb@vorwaerts-werbung.de>\n"
 "Language-Team: VW Language Team <cb@vorwaerts-werbung.de>\n"
@@ -63,6 +63,11 @@ msgstr "Jobliste"
 msgid "JobOpening"
 msgstr "Jobangebot"
 
+#: ./../jobfolder_templates/view.pt:37
+#: ./../sidebar_templates/sidebarviewlet.pt:36
+msgid "More job openings"
+msgstr ""
+
 #: ./../inquiry_templates/inquiryform.pt:98
 msgid "Name"
 msgstr "Name"
@@ -90,4 +95,8 @@ msgstr "Dieses Feld ist verpflichtend"
 #: ./../inquiry_templates/inquiryform.pt:182
 msgid "Your message"
 msgstr "Ihre Nachricht"
+
+#: ./../contentpage_templates/view.pt:46
+msgid "read more"
+msgstr ""
 

@@ -39,11 +39,38 @@
             <tal:block tal:repeat="item results">
               <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="appbox">
-                  <div class="appbox-content">
+                  <div class="appbox-content"
+                    tal:define="box_idx repeat/item/index">
                     <h2 tal:content="item/Title" />
                     <p tal:content="item/Description" />
-                    <a class="btn btn-primary"
-                      tal:attributes="href item/getURL">Mehr</a>
+                    <button class="btn btn-primary btn" data-toggle="modal" data-target="#myModal"
+                        tal:attributes="data-target string:#appboxModal${box_idx}"
+                        i18n:translate="">
+                      read more
+                    </button>
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+                        tal:attributes="id string:appboxModal${box_idx}">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel"
+                                tal:content="item/Title">Modal title</h4>
+                          </div>
+                          <div class="modal-body">
+                            <div tal:condition="item/text"
+                                tal:content="structure item/text/output" />
+                            <p tal:condition="not:item/text">
+                                This item does not have any body text</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div><!-- /.modal-content -->
+                      </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+
                   </div>
                 </div>
               </div>
