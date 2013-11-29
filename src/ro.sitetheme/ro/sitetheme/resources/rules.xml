@@ -78,9 +78,13 @@
         <replace css:content-children="#app-navbar-nav"
             css:theme-children="#app-navbar-nav" />
 
-        <!-- Breadcrumbs -->
+        <!-- Section marker -->
         <replace css:content-children='#portal-globalnav li.selected'
-            css:theme-children='.app-header-title' />
+            css:theme-children='.app-header-title'
+            css:if-not-content="body.section-work-fm" />
+        <replace css:content-children='#portal-globalnav li.selected'
+            css:theme-children='.app-header-title'
+            css:if-content="body.section-work-fm" />
 
         <!-- Login form rules -->
         <replace css:content-children="#content-core"
