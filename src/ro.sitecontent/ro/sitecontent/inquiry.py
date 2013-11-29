@@ -56,7 +56,7 @@ class InquiryForm(grok.View):
         context_url = context.absolute_url()
         mto = 'anfrage@roconsulting.de'
         envelope_from = '%s' % data['email']
-        subject = 'Buchungsanfrage von meintophotel.de'
+        subject = data['subject']
         options = dict(
             company=data['company'],
             position=data['position'],
@@ -65,6 +65,7 @@ class InquiryForm(grok.View):
             phone=data['phone'],
             message=data['message'],
             url=context_url,
+            subject=subject
         )
         msg = ViewPageTemplateFile("inquirymail.pt")(self, **options)
         api.portal.send_email(
@@ -73,7 +74,7 @@ class InquiryForm(grok.View):
             subject=subject,
             body=msg
         )
-        next_url = context.absolute_url() + '/@@inquiry-processed'
+        next_url = api.portal.get().absolute_url() + '/@@inquiry-processed'
         return self.request.response.redirect(next_url)
 
     def default_value(self, error):
@@ -81,3 +82,12 @@ class InquiryForm(grok.View):
         if error['active'] is False:
             value = error['msg']
         return value
+
+
+class InquiryProcessed(grok.View):
+    grok.context(IContentish)
+    grok.require('zope2.View')
+    grok.name('inquiry-processed')
+
+    def update(self):
+        self.portal_url = api.portal.get().absolute_url()
