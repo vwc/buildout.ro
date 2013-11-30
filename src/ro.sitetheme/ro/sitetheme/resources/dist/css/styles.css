@@ -10389,8 +10389,16 @@ dd.image-caption {
   background-position: 50% -550px;
 }
 
-.section-kontakt .app-header {
+.section-hr-management .app-header {
   background-position: 50% -1080px;
+}
+
+.section-consulting .app-header {
+  background-position: 50% -1630px;
+}
+
+.section-kontakt .app-header {
+  background-position: 50% -550px;
 }
 
 .app-header-claim {

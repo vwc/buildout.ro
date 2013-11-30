@@ -98,6 +98,18 @@ module.exports = function (grunt) {
                 src: ['font-awesome/font/*'],
                 dest: 'assets/fonts/'
             },
+            ico: {
+                expand: true,
+                flatten: true,
+                src: ['assets/ico/*'],
+                dest: 'dist/assets/ico/'
+            },
+            images: {
+                expand: true,
+                flatten: true,
+                src: ['assets/img/*'],
+                dest: 'dist/assets/img/'
+            },
             templates: {
                 expand: true,
                 flatten: true,
