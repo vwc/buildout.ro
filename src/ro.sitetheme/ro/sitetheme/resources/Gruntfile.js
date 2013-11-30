@@ -180,6 +180,11 @@ module.exports = function (grunt) {
                 path: 'dist/work-fm.html',
                 pattern: '../../assets/',
                 replacement: '/++theme++ro.sitetheme/assets/'
+            },
+            'compile-template-consultingm': {
+                path: 'dist/consulting.html',
+                pattern: '../../assets/',
+                replacement: '/++theme++ro.sitetheme/assets/'
             }
         },
 

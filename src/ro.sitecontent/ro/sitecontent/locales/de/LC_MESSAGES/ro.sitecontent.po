@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ro.sitecontent\n"
-"POT-Creation-Date: 2013-11-29 09:25+0000\n"
-"PO-Revision-Date: 2013-11-29 10:48+0100\n"
+"POT-Creation-Date: 2013-11-29 16:07+0000\n"
+"PO-Revision-Date: 2013-11-29 17:12+0100\n"
 "Last-Translator: Christoph Boehner <cb@vorwaerts-werbung.de>\n"
 "Language-Team: VW Language Team <cb@vorwaerts-werbung.de>\n"
 "MIME-Version: 1.0\n"
@@ -35,6 +35,11 @@ msgstr "Dateianhang"
 msgid "Body Text"
 msgstr "Haupttext"
 
+#: ./../contentpage_templates/view.pt:67
+#: ./../inquiry_templates/inquiryprocessed.pt:24
+msgid "Close"
+msgstr "Schliessen"
+
 #: ./../inquiry_templates/inquiryform.pt:55
 msgid "Company"
 msgstr "Firma"
@@ -52,6 +57,7 @@ msgid "Firstname"
 msgstr "Vorname"
 
 #: ./../inquiry_templates/inquiryform.pt:23
+#: ./../inquiry_templates/inquiryprocessed.pt:17
 msgid "Inquiry form"
 msgstr "Anfrageformular"
 
@@ -88,15 +94,24 @@ msgstr "Position"
 msgid "Subject"
 msgstr "Betreff"
 
+#: ./../inquiry_templates/inquiryform.pt:205
+msgid "Submit"
+msgstr "Abschicken"
+
 #: ./../inquiry.py:40
 msgid "This field is required"
 msgstr "Dieses Feld ist verpflichtend"
+
+#: ./../inquiry_templates/inquiryprocessed.pt:20
+msgid "Your inquiry has been forwarded to us and will be processed as soon as possible. Thank you for your interest. have a nice day."
+msgstr "Ihre Anfrage wurde an uns weitergleitet. Vielen Dank für Ihr Interesse und einen schönen Tag."
 
 #: ./../inquiry_templates/inquiryform.pt:182
 msgid "Your message"
 msgstr "Ihre Nachricht"
 
 #: ./../contentpage_templates/view.pt:46
+#: ./../jobfolder_templates/view.pt:92
 msgid "read more"
 msgstr "mehr"
 

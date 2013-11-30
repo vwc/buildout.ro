@@ -1,0 +1,41 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+     xmlns:tal="http://xml.zope.org/namespaces/tal"
+     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+     i18n:domain="ro.sitecontent" 
+     tal:omit-tag=""
+     tal:define="portal context/@@plone_portal_state/portal;
+                 charset portal/email_charset|string:utf-8;
+                 dummy python:request.RESPONSE.setHeader('Content-Type', 'text/plain;;charset=%s' % charset);">
+
+Anfrage von roconsulting.com
+====================================
+
+Ein Besucher der Seite hat folgende Nachricht abgeschickt:
+
+Betreff
+-------
+
+<span tal:replace="options/subject" tal:omit-tag="" />
+
+
+Persönliche Daten
+-----------------
+
+Vorname: <span tal:replace="options/firstname | nothing" tal:omit-tag="" />
+Nachname: <span tal:replace="options/name | nothing" tal:omit-tag="" />
+Firma: <span tal:replace="options/company | nothing" tal:omit-tag="" />
+Position: <span tal:replace="options/position | nothing" tal:omit-tag="" />
+Telefon: <span tal:replace="options/phone | string:Keine Angabe" tal:omit-tag="" />
+E-Mail-Adresse: <span tal:replace="options/email | nothing" tal:omit-tag="" />
+
+Nachricht:
+<span tal:replace="options/message | string:Keine Angabe" tal:omit-tag="" />
+
+
+---
+Anfrage
+roconsulting.com
+(<span tal:replace="options/url" tal:omit-tag="" />)
+
+
+</div>

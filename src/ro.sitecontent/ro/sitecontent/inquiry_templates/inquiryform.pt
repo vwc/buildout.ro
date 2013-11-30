@@ -156,7 +156,7 @@
             <div class="form-group field"
                 tal:define="error errors/email | nothing;
                             err_msg python:error and error['active'] == True"
-                tal:attributes="class python:err_msg and 'form-group error' or 'form-group'">
+                tal:attributes="class python:err_msg and 'form-group has-error' or 'form-group'">
                 <label class="col-sm-2 control-label" for="email">
                     <span i18n:translate="">Email</span>
                 </label>
@@ -203,7 +203,8 @@
         <div class="text-center app-form-actions">
               <span tal:replace="structure context/@@authenticator/authenticator"/>
               <button type="submit" class="btn btn-primary btn-lg"
-                  id="form.button.Submit" name="form.button.Submit">Submit</button>
+                  id="form.button.Submit" name="form.button.Submit"
+                  i18n:translate="">Submit</button>
         </div>
     </form>
   </metal:content-core>
