@@ -74,7 +74,8 @@ class InquiryForm(grok.View):
             subject=subject,
             body=msg
         )
-        next_url = api.portal.get().absolute_url() + '/@@inquiry-processed'
+        portal_url = api.portal.get().absolute_url()
+        next_url = portal_url + '/kontakt/@@inquiry-processed'
         return self.request.response.redirect(next_url)
 
     def default_value(self, error):
