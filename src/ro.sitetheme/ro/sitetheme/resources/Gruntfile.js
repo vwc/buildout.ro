@@ -18,7 +18,7 @@ module.exports = function (grunt) {
                   '*\n' +
                   '* Designed and built by ade25\n' +
                   '*/\n',
-        jqueryCheck: 'if (!jQuery) { throw new Error(\"Bootstrap requires jQuery\") }\n\n',
+        jqueryCheck: 'if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery") }\n\n',
 
         // Task configuration.
         clean: {
