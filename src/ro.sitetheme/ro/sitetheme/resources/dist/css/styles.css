@@ -9644,7 +9644,6 @@ div.field label span.formHelp {
 }
 
 div.field div.label,
-div.field span.label,
 div.field label {
   padding: 0;
   font-size: 14px;
@@ -9656,7 +9655,6 @@ div.field label {
 }
 
 div.field div.label span.formHelp,
-div.field span.label span.formHelp,
 div.field label span.formHelp {
   display: block;
   margin-top: 5px;
@@ -9706,17 +9704,12 @@ div.overlay-iframe {
 div.overlaybg div.close,
 div.overlay div.close {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: -14px;
+  left: -14px;
   width: 30px;
   height: 30px;
   cursor: pointer;
   background-image: url(../images/pb_close.png);
-}
-
-div.overlaybg div.close:after,
-div.overlay div.close:after {
-  content: '\d7';
 }
 
 .pb-ajax {
@@ -9775,7 +9768,7 @@ div.overlay #createGroup fieldset {
 }
 
 div.overlay p {
-  margin-bottom: 20px;
+  margin-bottom: 1.428571429;
 }
 
 div.overlay label {
@@ -10284,7 +10277,7 @@ dd.image-caption {
 }
 
 .app-brandbar {
-  padding: 20px;
+  padding: 0 20px 10px;
 }
 
 .app-brandbar.app-brandbar-default {
@@ -10374,31 +10367,14 @@ dd.image-caption {
 
 @media (min-width: 768px) {
   .app-header {
-    height: 725px;
-    background: url(../../assets/img/header-bg.jpg) no-repeat 50% 0 #e3e4e5;
+    height: 525px;
+    background: url(../../assets/img/roconsulting-header-bg.jpg) no-repeat 50% 0 #e3e4e5;
     border-bottom: 200px solid #e3e4e5;
   }
   .app-header.app-header-frontpage {
-    height: 775px;
-    border-bottom: 250px solid #e3e4e5;
+    height: 675px;
+    border-bottom: 200px solid #e3e4e5;
   }
-}
-
-.section-work-fm .app-header,
-.section-imprint .app-header {
-  background-position: 50% -550px;
-}
-
-.section-hr-management .app-header {
-  background-position: 50% -1080px;
-}
-
-.section-consulting .app-header {
-  background-position: 50% -1630px;
-}
-
-.section-kontakt .app-header {
-  background-position: 50% -550px;
 }
 
 .app-header-claim {
@@ -10430,7 +10406,7 @@ dd.image-caption {
   .app-header-claim {
     width: 480px;
     height: 20px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
   .app-header-claim:before,
   .app-header-claim:after {
@@ -10465,7 +10441,7 @@ dd.image-caption {
 
 @media (min-width: 992px) {
   .app-header-title {
-    margin-top: -100px;
+    margin-top: -50px;
   }
 }
 
@@ -10771,6 +10747,10 @@ textarea#userid {
 
 .appbox-li:last-child {
   border-width: 0;
+}
+
+.appbox-li-headline-primary {
+  color: #ed6262;
 }
 
 .app-form {

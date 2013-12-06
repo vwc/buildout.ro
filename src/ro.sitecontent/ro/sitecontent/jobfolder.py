@@ -100,9 +100,9 @@ class View(grok.View):
         return items
 
     def inquiry_url(self, item):
-        base_url = item.getURL()
+        base_url = api.portal.get().absolute_url()
         title = self._url_quote(item.Title())
-        params = '/@@inquiry-form?subject={0}'.format(title)
+        params = '/kontakt/@@inquiry-form?subject={0}'.format(title)
         url = base_url + params
         return url
 

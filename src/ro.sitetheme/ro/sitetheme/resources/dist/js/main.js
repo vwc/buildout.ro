@@ -5,7 +5,7 @@
 *
 * Designed and built by ade25
 */
-if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
+if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery") }
 
 /**
 * bootstrap.js v3.0.0 by @fat and @mdo
