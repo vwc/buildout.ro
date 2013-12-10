@@ -3,7 +3,7 @@
 // ---------------------------------------------
 
 .app-brandbar {
-    padding: @line-height-computed;
+    padding: 0 @line-height-computed ceil(@line-height-computed / 2);
     &.app-brandbar-default {
         border-bottom: 1px solid @brand-primary;
     }
@@ -71,28 +71,31 @@
     margin-bottom: 0;
     background: @app-gray-light;
     @media (min-width: @screen-sm) {
-        height: 725px;
+        height: 525px;
         border-bottom: (@navbar-height * 4) solid @app-gray-light;
-        background: url(../../assets/img/header-bg.jpg) no-repeat 50% 0 @app-gray-light;
+        // background: url(../../assets/img/header-bg.jpg) no-repeat 50% 0 @app-gray-light;
+        background: url(../../assets/img/roconsulting-header-bg.jpg) no-repeat 50% 0 @app-gray-light;
         &.app-header-frontpage {
-            height: 775px;
-            border-bottom: (@navbar-height * 5) solid @app-gray-light;
+            height: 675px;
+            border-bottom: (@navbar-height * 4) solid @app-gray-light;
         }
     }
 }
-.section-work-fm .app-header,
-.section-imprint .app-header {
-    background-position: 50% -550px;
-}
-.section-hr-management .app-header {
-    background-position: 50% -1080px;
-}
-.section-consulting .app-header {
-    background-position: 50% -1630px;
-}
-.section-kontakt .app-header {
-    background-position: 50% -550px;
-}
+
+// Disable bg image switch for now
+//.section-work-fm .app-header,
+//.section-imprint .app-header {
+//    background-position: 50% -550px;
+//}
+//.section-hr-management .app-header {
+//    background-position: 50% -1080px;
+//}
+//.section-consulting .app-header {
+//    background-position: 50% -1630px;
+//}
+//.section-kontakt .app-header {
+//    background-position: 50% -550px;
+//}
 
 .app-header-claim {
     position: relative;
@@ -108,7 +111,7 @@
     text-transform: uppercase;
     @media (min-width: @screen-md) {
         .size(@screen-xs, @line-height-computed);
-        margin-bottom: @navbar-height * 4;
+        margin-bottom: @navbar-height * 2;
         &:before,
         &:after {
             content:"";
@@ -137,7 +140,7 @@
         text-shadow: -1px -1px @gray, -2px -2px @gray;
     }
     @media (min-width: @screen-md) {
-        margin-top: -(@navbar-height * 2);
+        margin-top: -(@navbar-height);
     }
     > a {
         color: #fff;

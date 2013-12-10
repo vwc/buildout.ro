@@ -24,9 +24,8 @@
                     <tal:items tal:repeat="subitem subitems">
                       <div class="appbox-li"
                         tal:define="timestamp python:subitem.modified.ISO()">
-                        <a class="h5 appbox-li-headline"
-                          tal:attributes="href item/getURL"
-                          tal:content="python:toLocalizedTime(timestamp, long_format=False)" />
+                        <div class="h5 appbox-li-headline appbox-li-headline-primary"
+                            tal:content="python:toLocalizedTime(timestamp, long_format=False)" />
                         <div class="h5 appbox-li-headline"
                           tal:content="subitem/Title" />
                       </div>
@@ -64,12 +63,12 @@
                                   tal:attributes="href next_url">
                                   <i class="fa fa-envelope-o"></i> Anfrage
                             </a></p>
-                            <p>
-                            <a class="appbox-link"
-                              tal:condition="exists:context/attachment"
-                              tal:attributes="href string:${item/getURL}/@@download/attachment/${item/attachment/filename}">
-                              <i class="fa fa-arrow-circle-o-down"></i> PDF Download
-                            </a></p>
+                            <p tal:condition="item/attachment">
+                              <a class="appbox-link"
+                                tal:attributes="href string:${item/getURL}/@@download/attachment/${item/attachment/filename}">
+                                <i class="fa fa-arrow-circle-o-down"></i> PDF Download
+                              </a>
+                            </p>
                           </div>
                         </div>
                       </div>

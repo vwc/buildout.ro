@@ -23,8 +23,7 @@
           <tal:items tal:repeat="item items">
             <div class="appbox-li"
               tal:define="timestamp python:item.modified.ISO()">
-              <a class="h5 appbox-li-headline"
-                tal:attributes="href item/getURL"
+              <div class="h5 appbox-li-headline appbox-li-headline-primary"
                 tal:content="python:toLocalizedTime(timestamp, long_format=False)" />
               <div class="h5 appbox-li-headline"
                 tal:content="item/Title" />
