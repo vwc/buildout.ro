@@ -9644,6 +9644,7 @@ div.field label span.formHelp {
 }
 
 div.field div.label,
+div.field span.label,
 div.field label {
   padding: 0;
   font-size: 14px;
@@ -9655,6 +9656,7 @@ div.field label {
 }
 
 div.field div.label span.formHelp,
+div.field span.label span.formHelp,
 div.field label span.formHelp {
   display: block;
   margin-top: 5px;
@@ -9704,12 +9706,17 @@ div.overlay-iframe {
 div.overlaybg div.close,
 div.overlay div.close {
   position: absolute;
-  top: -14px;
-  left: -14px;
+  top: 10px;
+  left: 10px;
   width: 30px;
   height: 30px;
   cursor: pointer;
   background-image: url(../images/pb_close.png);
+}
+
+div.overlaybg div.close:after,
+div.overlay div.close:after {
+  content: '\d7';
 }
 
 .pb-ajax {
@@ -9768,7 +9775,7 @@ div.overlay #createGroup fieldset {
 }
 
 div.overlay p {
-  margin-bottom: 1.428571429;
+  margin-bottom: 20px;
 }
 
 div.overlay label {
@@ -10367,12 +10374,12 @@ dd.image-caption {
 
 @media (min-width: 768px) {
   .app-header {
-    height: 525px;
-    background: url(../../assets/img/roconsulting-header-bg.jpg) no-repeat 50% 0 #e3e4e5;
+    height: 585px;
+    background: url(../../assets/img/ro-header-bg.jpg) no-repeat 50% 0 #e3e4e5;
     border-bottom: 200px solid #e3e4e5;
   }
   .app-header.app-header-frontpage {
-    height: 675px;
+    height: 735px;
     border-bottom: 200px solid #e3e4e5;
   }
 }
