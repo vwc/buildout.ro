@@ -7,7 +7,8 @@
             </div>
             <div class="appbox-footer appbox-footer-centered">
               <a class="btn btn-primary app-btn" href=""
-                tal:attributes="href item/getURL">
+                tal:attributes="href item/getURL"
+                i18n:translate="">
                 read more
               </a>
             </div>
