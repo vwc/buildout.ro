@@ -6,7 +6,7 @@
               <h2 tal:content="item/Title">One item from higher up in the hierachry</h2>
             </div>
             <div class="appbox-footer appbox-footer-centered">
-              <a class="btn btn-primary app-btn" href=""
+              <a class="btn btn-primary appbox-btn" href=""
                 tal:attributes="href item/getURL"
                 i18n:translate="">
                 read more

@@ -10742,6 +10742,10 @@ textarea#userid {
   text-transform: uppercase;
 }
 
+.appbox-btn.appbox-btn-sm {
+  text-transform: none;
+}
+
 .appbox-subcontent {
   text-align: left;
 }
