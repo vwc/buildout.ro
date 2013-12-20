@@ -10384,6 +10384,20 @@ dd.image-caption {
   }
 }
 
+.section-work-fm .app-header,
+.section-imprint .app-header {
+  background-image: url(../../assets/img/ro-header-work-fm.jpg);
+}
+
+.section-hr-management .app-header,
+.section-kontakt .app-header {
+  background-image: url(../../assets/img/ro-header-hrm.jpg);
+}
+
+.section-consulting .app-header {
+  background-image: url(../../assets/img/ro-header-consulting.jpg);
+}
+
 .app-header-claim {
   position: relative;
   display: block;
