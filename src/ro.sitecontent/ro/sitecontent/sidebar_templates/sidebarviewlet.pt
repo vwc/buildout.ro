@@ -6,8 +6,9 @@
               <h2 tal:content="item/Title">One item from higher up in the hierachry</h2>
             </div>
             <div class="appbox-footer appbox-footer-centered">
-              <a class="btn btn-primary app-btn" href=""
-                tal:attributes="href item/getURL">
+              <a class="btn btn-primary appbox-btn" href=""
+                tal:attributes="href item/getURL"
+                i18n:translate="">
                 read more
               </a>
             </div>
@@ -17,7 +18,7 @@
     <div class="appbox"
         tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
       <div class="appbox-content">
-        <h2>Work FM</h2>
+        <h2>Work-FM</h2>
         <div class="appbox-subcontent"
           tal:define="items viewlet/job_openings">
           <tal:items tal:repeat="item items">
