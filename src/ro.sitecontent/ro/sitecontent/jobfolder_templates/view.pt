@@ -80,7 +80,7 @@
                     </tal:block>
                 </div>
             </div>
-            <div class="col-x-s12 col-md-3">
+            <div class="col-xs-12 col-md-3">
                 <tal:block tal:repeat="item view/get_all_job_folders">
                     <div class="appbox"
                         tal:condition="python:view.display_parent_pointer(item)">
