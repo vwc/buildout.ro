@@ -6,6 +6,7 @@
     $(document).ready(function () {
         if ($('body').hasClass('lt-ie7')) {return; }
         // Application specific javascript code goes here
+        $('.appbox-content h2').slabText();
     }
     );
 }(jQuery));

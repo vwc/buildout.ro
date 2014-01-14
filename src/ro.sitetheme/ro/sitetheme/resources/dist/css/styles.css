@@ -10867,7 +10867,7 @@ dd.image-caption {
   font-weight: 700;
   line-height: 1.1;
   line-height: 20px;
-  color: #ed6262;
+  color: #ed6262 !important;
   color: inherit;
   text-transform: uppercase;
 }
@@ -10911,7 +10911,7 @@ dd.image-caption {
 @media (min-width: 768px) {
   .app-header-title {
     font-size: 63px;
-    color: #fff;
+    color: #fff !important;
     text-shadow: -1px -1px #555555, -2px -2px #555555;
   }
 }
