@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="appbox-footer appbox-footer-centered">
-        <a class="btn btn-primary app-btn"
+        <a class="btn btn-primary appbox-btn"
           tal:attributes="href string:${viewlet/portal_url}/work-fm"
           i18n:translate="">
           More job openings
