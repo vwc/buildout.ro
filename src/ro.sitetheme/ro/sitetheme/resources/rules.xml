@@ -42,7 +42,6 @@
             />
 
         <drop theme="/html/head/style" />
-        <drop theme="/html/head/script" />
         <drop theme="/html/head/link" />
 
         <!-- Drop scripts from theme footer if present -->
